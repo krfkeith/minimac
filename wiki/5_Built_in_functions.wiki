@@ -1,4 +1,4 @@
-#User Manual - 5 Built-in functions
+#summary User Manual - 5 Built-in functions
 
 =5 Built-in functions=
 
