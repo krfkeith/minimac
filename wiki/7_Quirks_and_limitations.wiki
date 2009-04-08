@@ -3,3 +3,8 @@
 =7 Quirks and limitations=
 
 [unfinished...]
+
+----
+*minimac - A minimalist macro processor*
+
+_Copyright 2009 Mark W. Humphries. All rights reserved._
