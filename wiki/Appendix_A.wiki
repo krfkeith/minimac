@@ -1,13 +1,29 @@
 #summary User Manual - Appendix A Quick reference
 
-= Introduction =
+=Appendix A - <b>minimac</b> Quick Reference=
 
-Add your content here.
+==Special characters:==
 
+||`||define||
+||$||embed||
+||\||escape||
+||&||push||
+||^||self-reference||
 
-= Details =
+==Buit-ins:==
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+||<b>name</b>||<b>action</b>||<b>stack effect</b>||
+||{?}||expand||( token -- )||
+||{+}||plus||( integer integer -- sum )||
+||{++}||increment||( integer integer -- integer+1) or ( name -- )||
+||{.m}||list macros||( -- )||
+||{.s}||display stack||( -- )||
+||{dup}||duplicate||( x -- x x )||
+
+<br/>   
+...unfinished - more to come
+
+----
+*minimac - A minimalist macro processor*
+
+_Copyright 2009 Mark W. Humphries. All rights reserved._
