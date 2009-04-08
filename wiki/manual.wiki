@@ -192,6 +192,8 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 <tt><b>
  ```foo```just a test```<br/>
  =><br/>
+ foo&<br/>
+ =><br/>
  {.s}<br/>
  =>-------<br/>
  =>Items on the stack (2):<br/>
