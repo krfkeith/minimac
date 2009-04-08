@@ -49,10 +49,10 @@
  The following example defines the macro 'foo' that expands to `Hello world!'
 
 <tt><b>
-```foo```Hello World!```<br/>
-=><br/>
-foo<br/>
-=>Hello World!<br/>
+ ```foo```Hello World!```<br/>
+ =><br/>
+ foo<br/>
+ =>Hello World!<br/>
 </b></tt>
 
  Any text between the first space after end of the name and the body of the definition is ignored. The following three examples are equivalent:
@@ -222,7 +222,7 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
  The following section is a catalog of the minimac's built-ins, included with each built-in's description is a stack effect diagram, in a notation similar to that used by the Forth language, a stack-based language which inspired much of minimac's philosophy and design.
  
- The stack effect diagram documents the items that are required to be on the stack before the built-in is invoked, and the after-effect on the stack after the built-in's invocvation.
+ The stack effect diagram documents the items that are required to be on the stack before the built-in is invoked, and the after-effect on the stack after the built-in's invocation.
  
  For example, the stack effect for the '{+}' built-in is '( integer integer -- sum )', 
 meaning that it expects two (decimal) integers on the stack, which it will remove, and leave their sum in their place.
