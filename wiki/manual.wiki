@@ -265,7 +265,7 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 ===5.4.7 [unfinished - more to come]===
 
 
-=6.0 Macros with arguments=
+=6 Macros with arguments=
 
  unfinished...
 
