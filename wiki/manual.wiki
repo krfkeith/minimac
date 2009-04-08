@@ -1,7 +1,6 @@
 #summary User Manual - 1st draft
 
 <font size="5" color="green">minimac - a minimalist macro processor</font><br/>
-_Copyright (c) 2009 Mark W. Humphries. All rights reserved._
 
 <wiki:toc max_depth="1" />
 
