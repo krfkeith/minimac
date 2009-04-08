@@ -108,7 +108,7 @@
 
 ==3.4 Self-referential macros==
 
- The caret '^' character in the body of a macro expands to the previous definition with the same name as the macro currently being defined.
+ The caret '^' character in the body of a macro expands to the latest definition of the same name as the macro which contains it.
 
 <tt><b>
  ```greet```hello```<br/>
