@@ -1,3 +1,4 @@
+#summary User Manual - 2 Invoking minimac
 =2 Invoking minimac=
 
  The minimac executable is named 'mm'.
