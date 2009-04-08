@@ -1,4 +1,0 @@
-#summary User Manual - 6 Macros with arguments (not yet done)
-=6.0 Macros with arguments=
-
-[unfinished...]
