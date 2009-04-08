@@ -1,0 +1,12 @@
+=2 Invoking minimac=
+
+ The minimac executable is named 'mm'.
+ Minimac reads from standard input and writes the processed text to standard output, error messages are written to standard error
+ Minimac currently does not recognize any command-line switches or options.
+
+ Minimac exits 0 on success, and 1 if an error occurs.
+
+----
+*minimac - A minimalist macro processor*
+
+_Copyright 2009 Mark W. Humphries. All rights reserved._
