@@ -111,3 +111,8 @@ The stack effect diagram '( -- )' denotes a built-in that has no expectations of
 [unfinished...]
 
 ===5.4.7 [unfinished - more to come]===
+
+----
+*minimac - A minimalist macro processor*
+
+_Copyright 2009 Mark W. Humphries. All rights reserved._
