@@ -44,7 +44,7 @@
 ==3.1 Defining a basic substitution macro==
 
  A macro definition is composed of a name and a body. 
-A macro definition begins with the backquote character ` (upper left key on most keyboards) followed by the macro name. A second backquote begins the body of the definition, and a third backquote ends the definition.
+ A macro definition begins with the backquote character ` (upper left key on most keyboards) followed by the macro name. A second backquote begins the body of the definition, and a third backquote ends the definition.
  
  The following example defines the macro 'foo' that expands to `Hello world!'
 
