@@ -13,8 +13,7 @@ Thanks for you interest in minimac.
 Minimac is a minimalist macro processor that is intended as a front end preprocessor for little language compilers.
 
 ==1.2 Current Status==
-This project was started in April 2009. The software is currently in pre-alpha status,
-and is being developed in my spare time concurrently with the writing of this manual
+This project was started in April 2009. The software, currently in pre-alpha status, is being developed in my spare time concurrently with the writing of this manual
 
 This Wiki will serve as an initial draft of an eventual users manual.
  
