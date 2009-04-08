@@ -1,4 +1,4 @@
-#summary User Manual 3 Defining Macros
+#summary User Manual - 3 Defining Macros
 =3 Defining macros=
 
 ==3.1 Defining a basic substitution macro==
