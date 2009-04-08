@@ -1,0 +1,31 @@
+=1 Introduction=
+
+==1.1 Synopsis==
+
+Thanks for you interest in minimac.
+
+Minimac is a minimalist macro processor that is intended as a front end preprocessor for little language compilers.
+
+==1.2 Current Status==
+This project was started in April 2009. The software is currently in pre-alpha status,
+and is being developed in my spare time concurrently with the writing of this manual
+
+This Wiki will serve as an initial draft of an eventual users manual.
+ 
+All feedback is very welcome.
+
+==1.3 Notation==
+
+In this manual all output from minimac is prefixed with '*=>*'.
+
+==1.3 Alternatives to minimac==
+ 
+If minimac is not suited to your needs, the following open source macro-processors are possible alternatives:
+  * m4
+  * gpp
+  * ...[unfinished]
+
+----
+*Minimac - A minimalist macro processor*
+
+_Copyright 2009 Mark W. Humphries. All rights reserved._
