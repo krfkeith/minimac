@@ -26,6 +26,6 @@ If minimac is not suited to your needs, the following open source macro-processo
   * ...[unfinished]
 
 ----
-*Minimac - A minimalist macro processor*
+*minimac - A minimalist macro processor*
 
 _Copyright 2009 Mark W. Humphries. All rights reserved._
