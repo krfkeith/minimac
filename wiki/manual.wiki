@@ -8,24 +8,25 @@
 
 ==1.1 Synopsis==
 
-Thanks for you interest in minimac.
+ Thanks for you interest in minimac.
 
-Minimac is a minimalist macro processor that is intended as a front end preprocessor for little language compilers.
+ Minimac is a minimalist macro processor that is intended as a front end preprocessor for little language compilers.
 
 ==1.2 Current Status==
-This project was started in April 2009. The software, currently in pre-alpha status, is being developed in my spare time concurrently with the writing of this manual
 
-This Wiki will serve as an initial draft of an eventual users manual.
+ This project was started in April 2009. The software, currently in pre-alpha status, is being developed in my spare time concurrently with the writing of this manual
+
+ This Wiki will serve as an initial draft of an eventual users manual.
  
-All feedback is very welcome.
+ All feedback is very welcome.
 
 ==1.3 Notation==
 
-In this manual all output from minimac is prefixed with '*=>*'.
+ In this manual all output from minimac is prefixed with '*=>*'.
 
-==1.3 Alternatives to minimac==
+==1.4 Alternatives to minimac==
  
-If minimac is not suited to your needs, the following open source macro-processors are possible alternatives:
+ If minimac is not suited to your needs, the following open source macro-processors are possible alternatives:
   * m4
   * gpp
   * ...[unfinished]
@@ -42,10 +43,10 @@ If minimac is not suited to your needs, the following open source macro-processo
 
 ==3.1 Defining a basic substitution macro==
 
-A macro definition is composed of a name and a body. 
+ A macro definition is composed of a name and a body. 
 A macro definition begins with the backquote character ` (upper left key on most keyboards) followed by the macro name. A second backquote begins the body of the definition, and a third backquote ends the definition.
  
-The following example defines the macro 'foo' that expands to `Hello world!'
+ The following example defines the macro 'foo' that expands to `Hello world!'
 
 <tt><b>
 ```foo```Hello World!```<br/>
@@ -54,7 +55,7 @@ foo<br/>
 =>Hello World!<br/>
 </b></tt>
 
-Any text between the first space after end of the name and the body of the definition is ignored. The following three examples are equivalent:
+ Any text between the first space after end of the name and the body of the definition is ignored. The following three examples are equivalent:
 
 <tt><b>
 ```foo```Hello World!```<br/>
@@ -62,7 +63,7 @@ Any text between the first space after end of the name and the body of the defin
 ```foo This is an example ```Hello World!```<br/>
 </b></tt>
 
-Macro names are case sensitive:
+ Macro names are case sensitive:
 
 <tt><b>
 ```foo```Hello```<br/>
@@ -75,7 +76,7 @@ foo<br/>
 
 ==3.2 Redefining a macro==
 
-A new definition of a macro replaces the previous definition from that point onwards.
+ A new definition of a macro replaces the previous definition from that point onwards.
 
 <tt><b>
 ```foo```Hello```<br/>
@@ -90,7 +91,7 @@ foo<br/>
 
 ==3.3 Nested macros==
 
-Macro expansion is delayed to the last possible moment.
+ Macro expansion is delayed to the last possible moment.
 
 <tt><b>
 ```friend```George```<br/>
@@ -107,7 +108,7 @@ greet<br/>
 
 ==3.4 Self-referential macros==
 
-The caret '^' character in the body of a macro expands to the previous definition with the same name as the macro currently being defined.
+ The caret '^' character in the body of a macro expands to the previous definition with the same name as the macro currently being defined.
 
 <tt><b>
 ```greet```hello```<br/>
@@ -122,7 +123,7 @@ greet<br/>
 
 ==3.5 Embedded macro names==
 
-To expand a macro name that is adjacent to a non-whitespace character, place a dollar '$' character between the name and the non-whitespace character:
+ To expand a macro name that is adjacent to a non-whitespace character, place a dollar '$' character between the name and the non-whitespace character:
 
 <tt><b>
 ```what```car```<br/>
@@ -139,7 +140,7 @@ thing<br/>
 
 ==4.1 The escape character==
 
-The backslash '\' character is used as an escape character, i.e. the character immediately following the backslash is interpreted literally.
+ The backslash '\' character is used as an escape character, i.e. the character immediately following the backslash is interpreted literally.
 
 <tt><b>
 ```test```bcd```<br/>
@@ -158,14 +159,14 @@ escaped<br/>
 
 ==5.1 How to use to built-ins==
 
-Built-in are special names that invoke useful behavior or side-effects when expanded.
+ Built-in are special names that invoke useful behavior or side-effects when expanded.
 For example the increment built-in, whose name is '{++}', is used to increment a number. 
  
 ==5.2 The macro argument stack==
  
-When a built-in requires one or more arguments, these are taken from the macro argument stack. 
+ When a built-in requires one or more arguments, these are taken from the macro argument stack. 
  
-The contents of the argument stack can be displayed at any time for diagnostic purposes by invoking the {.s} built-in.
+ The contents of the argument stack can be displayed at any time for diagnostic purposes by invoking the {.s} built-in.
 
 <tt><b> 
 {.s}<br/>
@@ -174,7 +175,7 @@ The contents of the argument stack can be displayed at any time for diagnostic p
 =>-------<br/>
 </b></tt>
 
-To push an item, usually a token, onto the stack, append the ampersand character '&' to it:
+ To push an item, usually a token, onto the stack, append the ampersand character '&' to it:
 
 <tt><b> 
 5&<br/>
@@ -186,7 +187,7 @@ To push an item, usually a token, onto the stack, append the ampersand character
 =>-------<br/>
 </b></tt>
 
-Macro names can be pushed onto the stack:
+ Macro names can be pushed onto the stack:
 
 <tt><b>
 ```foo```just a test```<br/>
@@ -199,7 +200,7 @@ Macro names can be pushed onto the stack:
 =>-------<br/>
 </b></tt>
 
-Use the expand `{?}' built-in to pop the top item off and expand it.
+ Use the expand `{?}' built-in to pop the top item off and expand it.
 
 <tt><b> 
 {?}<br/>
@@ -219,61 +220,59 @@ Use the expand `{?}' built-in to pop the top item off and expand it.
  
 ==5.3 Stack effect notation==
 
-The following section is a catalog of the minimac's built-ins, included with each built-in's description is a stack effect diagram, in a notation similar to that used by the Forth language, a stack-based language which inspired much of minimac's philosophy and design.
+ The following section is a catalog of the minimac's built-ins, included with each built-in's description is a stack effect diagram, in a notation similar to that used by the Forth language, a stack-based language which inspired much of minimac's philosophy and design.
  
-The stack effect diagram documents the items that are required to be on the stack before the built-in is invoked, and the after-effect on the stack after the built-in's invocvation.
+ The stack effect diagram documents the items that are required to be on the stack before the built-in is invoked, and the after-effect on the stack after the built-in's invocvation.
  
-For example, the stack effect for the '{+}' built-in is '( integer integer -- sum )', 
+ For example, the stack effect for the '{+}' built-in is '( integer integer -- sum )', 
 meaning that it expects two (decimal) integers on the stack, which it will remove, and leave their sum in their place.
  
-In both the before and after sections of the stack diagram the rightmost item is considered to be at the top of the stack.
+ In both the before and after sections of the stack diagram the rightmost item is considered to be at the top of the stack.
  
-The stack effect diagram '( -- )' denotes a built-in that has no expectations of the stack nor after-effects on the stack.
+ The stack effect diagram '( -- )' denotes a built-in that has no expectations of the stack nor after-effects on the stack.
 
 ==5.4 Catalog of built-ins==
 
 ===5.4.1 {?} - expand===
 
-{?} ( token -- )
-unfinished...
+ {?} ( token -- )
+ unfinished...
 
 ===5.4.2 {+} - plus===
 
-{+} ( integer integer -- sum )
-unfinished...
+ {+} ( integer integer -- sum )
+ unfinished...
 
 ===5.4.3 {++} - increment===
 
-{++} ( integer integer -- integer+1) or ( name -- )
-unfinished...
-
+ {++} ( integer integer -- integer+1) or ( name -- )
+ unfinished...
 
 ===5.4.4 {.m} - display macro definitions===
 
-{.m} ( -- )
-unfinished...
+ {.m} ( -- )
+ unfinished...
 
 ===5.4.5 {.s} - display stack contents===
 
-{.s} ( -- )
-unfinished...
+ {.s} ( -- )
+ unfinished...
 
 ===5.4.6 {dup} - duplicate===
 
-{dup} ( x -- x x )
-{.m} ( -- )
-unfinished...
+ {dup} ( x -- x x )
+ unfinished...
 
 ===5.4.7 [unfinished - more to come]===
 
 
 =6.0 Macros with arguments=
 
-unfinished...
+ unfinished...
 
 =7 Quirks and limitations=
 
-unfinished...
+ unfinished...
 
 =Appendix A - <b>minimac</b> Quick Reference=
 
@@ -296,7 +295,7 @@ unfinished...
 ||{dup}||duplicate||( x -- x x )||
 
 <br/>   
-...unfinished - more to come
+ ...unfinished - more to come
 
 =Appendix B - BSD Documentation License=
 
