@@ -237,31 +237,37 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 ===5.4.1 {?} - expand===
 
  {?} ( token -- )
+
  unfinished...
 
 ===5.4.2 {+} - plus===
 
  {+} ( integer integer -- sum )
+
  unfinished...
 
 ===5.4.3 {++} - increment===
 
  {++} ( integer integer -- integer+1) or ( name -- )
+
  unfinished...
 
 ===5.4.4 {.m} - display macro definitions===
 
  {.m} ( -- )
+
  unfinished...
 
 ===5.4.5 {.s} - display stack contents===
 
  {.s} ( -- )
+
  unfinished...
 
 ===5.4.6 {dup} - duplicate===
 
  {dup} ( x -- x x )
+
  unfinished...
 
 ===5.4.7 [unfinished - more to come]===
