@@ -242,13 +242,13 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
 ===5.4.2 {+} - plus===
 
- {+} ( integer integer -- sum )
+ {+} ( n1 n2 -- n1+n2 )
 
  unfinished...
 
 ===5.4.3 {++} - increment===
 
- {++} ( integer integer -- integer+1) or ( name -- )
+ {++} ( n -- n+1) or ( name -- )
 
  unfinished...
 
@@ -295,8 +295,8 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
 ||<b>name</b>||<b>action</b>||<b>stack effect</b>||
 ||{?}||expand||( token -- )||
-||{+}||plus||( integer integer -- sum )||
-||{++}||increment||( integer integer -- integer+1) or ( name -- )||
+||{+}||plus||( n1 n2 -- n1+n2 )||
+||{++}||increment||( n -- n+1) or ( name -- )||
 ||{.m}||list macros||( -- )||
 ||{.s}||display stack||( -- )||
 ||{dup}||duplicate||( x -- x x )||
