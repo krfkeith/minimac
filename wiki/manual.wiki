@@ -264,13 +264,25 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
  unfinished...
 
-===5.4.6 {dup} - duplicate===
+===5.4.6 {drop} - drop top of stack===
+
+ {drop} ( x -- )
+
+ unfinished...
+
+===5.4.7 {dup} - duplicate top of stack===
 
  {dup} ( x -- x x )
 
  unfinished...
 
-===5.4.7 [unfinished - more to come]===
+===5.4.8 {over} - duplicate next of stack===
+
+ {dup} ( x1 x2 -- x1 x2 x1 )
+
+ unfinished...
+
+===5.4.9 [unfinished - more to come]===
 
 
 =6 Macros with arguments=
@@ -299,7 +311,9 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 ||{++}||increment||( n -- n+1 ) or ( name -- )||
 ||{.m}||list macros||( -- )||
 ||{.s}||display stack||( -- )||
+||{drop}||drop||( x -- )||
 ||{dup}||duplicate||( x -- x x )||
+||{over}||over||( x1 x2 -- x1 x2 x1 )||
 
 <br/>   
  ...unfinished - more to come
