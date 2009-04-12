@@ -315,7 +315,7 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 ||{?}||expand||( token -- )||
 ||{+}||plus||( n1 n2 -- n1+n2 )||
 ||{++}||increment||( n -- n+1 ) or ( name -- )||
-||{--}||decrement||( n -- n+1 ) or ( name -- )||
+||{--}||decrement||( n -- n-1 ) or ( name -- )||
 ||{.m}||list macros||( -- )||
 ||{.s}||display stack||( -- )||
 ||{drop}||drop||( x -- )||
