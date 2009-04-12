@@ -238,51 +238,57 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
  {?} ( token -- )
 
- unfinished...
+ implemented...
 
 ===5.4.2 {+} - plus===
 
  {+} ( n1 n2 -- n1+n2 )
 
- unfinished...
+ implemented...
 
 ===5.4.3 {++} - increment===
 
  {++} ( n -- n+1) or ( name -- )
 
- unfinished...
+ implemented...
 
-===5.4.4 {.m} - display macro definitions===
+===5.4.4 {--} - decrement===
+
+ {--} ( n -- n-1) or ( name -- )
+
+ not yet implemented...
+
+===5.4.5 {.m} - display macro definitions===
 
  {.m} ( -- )
 
- unfinished...
+ implemented...
 
-===5.4.5 {.s} - display stack contents===
+===5.4.6 {.s} - display stack contents===
 
  {.s} ( -- )
 
- unfinished...
+ implemented...
 
-===5.4.6 {drop} - drop top of stack===
+===5.4.7 {drop} - drop top of stack===
 
  {drop} ( x -- )
 
- unfinished...
+ not yet implemented...
 
-===5.4.7 {dup} - duplicate top of stack===
+===5.4.8 {dup} - duplicate top of stack===
 
  {dup} ( x -- x x )
 
- unfinished...
+ not yet implemented...
 
-===5.4.8 {over} - duplicate next of stack===
+===5.4.9 {over} - duplicate next of stack===
 
- {dup} ( x1 x2 -- x1 x2 x1 )
+ {over} ( x1 x2 -- x1 x2 x1 )
 
- unfinished...
+ not yet implemented...
 
-===5.4.9 [unfinished - more to come]===
+===5.4.10 [unfinished - more to come]===
 
 
 =6 Macros with arguments=
@@ -309,6 +315,7 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 ||{?}||expand||( token -- )||
 ||{+}||plus||( n1 n2 -- n1+n2 )||
 ||{++}||increment||( n -- n+1 ) or ( name -- )||
+||{--}||decrement||( n -- n+1 ) or ( name -- )||
 ||{.m}||list macros||( -- )||
 ||{.s}||display stack||( -- )||
 ||{drop}||drop||( x -- )||
