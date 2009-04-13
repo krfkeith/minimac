@@ -300,6 +300,12 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
  implemented...
 
+===5.4.6 {@} - fetch===
+
+ {@} ( name -- value )
+
+ implemented...
+
 ===5.4.7 {drop} - drop top of stack===
 
  {drop} ( x -- )
@@ -363,6 +369,7 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 ||{.m}||list macros||( -- )||
 ||{.s}||display stack||( -- )||
 ||{?}||expand||( token -- )||
+||{@}||fetch||( name -- value )||
 ||{drop}||drop||( x -- )||
 ||{dup}||duplicate||( x -- x x )||
 ||{if}||if||( x -- )||
