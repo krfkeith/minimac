@@ -316,8 +316,10 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
  {if} ( x -- x| )
 
- implemented...
+ Expands the rest of the definition only if the integer value of x is not zero. Conversely if x is not zero, x is dropped from the stack, and the remainder of the enclosing definition is no longer expanded.
 
+ Example:
+ ...coming soon...
 ===5.4.10 {over} - duplicate next of stack===
 
  {over} ( x1 x2 -- x1 x2 x1 )
