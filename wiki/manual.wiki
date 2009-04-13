@@ -181,6 +181,7 @@ For example the increment built-in, whose name is '{++}', is used to increment a
  5&<br/>
  =><br/>
  {.s}<br/>
+ =><br/>
  =>-------<br/>
  =>Items on the stack (1):<br/>
  `=>stack[0] => [5]`<br/>
@@ -195,6 +196,7 @@ For example the increment built-in, whose name is '{++}', is used to increment a
  foo&<br/>
  =><br/>
  {.s}<br/>
+ =><br/>
  =>-------<br/>
  =>Items on the stack (2):<br/>
  `=>stack[1] => [foo]`<br/>
@@ -208,6 +210,7 @@ For example the increment built-in, whose name is '{++}', is used to increment a
  {?}<br/>
  =>this is a test<br/>
  {.s}<br/>
+ =><br/>
  =>-------<br/>
  =>Items on the stack (1):<br/>
  `=>stack[0] => [5]`<br/>
@@ -238,13 +241,29 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
  {+} ( n1 n2 -- n1+n2 )
 
- implemented...
+ Add n2 to n1, giving the sum n1+n2
+
+ Example:
+
+<tt><b>
+ 5& 3& {.s}
+ =><br/>
+ =>-------<br/>
+ =>Items on the stack (2):<br/>
+ `=>stack[1] => [3]`<br/>
+ `=>stack[0] => [5]`<br/>
+ =>-------<br/>
+ {+} {.s}
+ =>-------<br/>
+ =>Items on the stack (1):<br/>
+ `=>stack[0] => [8]`<br/>
+ =>-------<br/>
+</b></tt>
 
 ===5.4.2 {++} - increment===
 
  {++} ( n -- n+1) or ( name -- )
 
- implemented...
 
 ===5.4.3 {--} - decrement===
 
