@@ -330,7 +330,7 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
  {repeat} ( -- )
 
- implemented...
+ Repeats the expansion of the enclosing definition.
 
 ===5.4.12 [unfinished - more to come]===
 
