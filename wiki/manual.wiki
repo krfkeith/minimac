@@ -266,12 +266,21 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
  {++} ( n -- n+1) or ( name -- )
 
+ If the top stack item is a name, its body is incremented, 
+ otherwise the top stack item is treated as a literal and incremented in place. 
+
+ Example:
+  ...coming soon
 
 ===5.4.3 {--} - decrement===
 
  {--} ( n -- n-1) or ( name -- )
 
- implemented...
+ If the top stack item is a name, its body is decremented, 
+ otherwise the top stack item is treated as a literal and decremented in place. 
+
+ Example:
+  ...coming soon
 
 ===5.4.4 {.m} - display macro definitions===
 
