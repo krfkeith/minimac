@@ -342,9 +342,9 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
  ????
 
-=6 Macros with arguments=
+=6 Sample Macros=
 
- unfinished...
+ ...coming soon...
 
 =7 Quirks and limitations=
 
