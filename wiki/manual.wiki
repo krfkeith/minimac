@@ -255,6 +255,7 @@ For example the increment built-in, whose name is '{++}', is used to increment a
  `=>stack[0] => [5]`<br/>
  =>-------<br/>
  {+} {.s}<br/>
+ =><br/>
  =>-------<br/>
  =>Items on the stack (1):<br/>
  `=>stack[0] => [8]`<br/>
