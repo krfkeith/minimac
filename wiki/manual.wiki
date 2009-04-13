@@ -234,39 +234,39 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
 ==5.4 Catalog of built-ins==
 
-===5.4.1 {?} - expand===
-
- {?} ( token -- )
-
- implemented...
-
-===5.4.2 {+} - plus===
+===5.4.1 {+} - plus===
 
  {+} ( n1 n2 -- n1+n2 )
 
  implemented...
 
-===5.4.3 {++} - increment===
+===5.4.2 {++} - increment===
 
  {++} ( n -- n+1) or ( name -- )
 
  implemented...
 
-===5.4.4 {--} - decrement===
+===5.4.3 {--} - decrement===
 
  {--} ( n -- n-1) or ( name -- )
 
  implemented...
 
-===5.4.5 {.m} - display macro definitions===
+===5.4.4 {.m} - display macro definitions===
 
  {.m} ( -- )
 
  implemented...
 
-===5.4.6 {.s} - display stack contents===
+===5.4.5 {.s} - display stack contents===
 
  {.s} ( -- )
+
+ implemented...
+
+===5.4.6 {?} - expand===
+
+ {?} ( token -- )
 
  implemented...
 
@@ -284,10 +284,9 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
 ===5.4.9 {if} - if control-flow===
 
- {if} ( x -- )
+ {if} ( x -- x| )
 
  implemented...
-
 
 ===5.4.10 {over} - duplicate next of stack===
 
@@ -295,8 +294,15 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
  implemented...
 
-===5.4.11 [unfinished - more to come]===
+===5.4.11 {repeat} - repeat control-flow===
 
+ {repeat} ( -- )
+
+ implemented...
+
+===5.4.12 [unfinished - more to come]===
+
+ ????
 
 =6 Macros with arguments=
 
@@ -319,16 +325,17 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 ==Buit-ins:==
 
 ||<b>name</b>||<b>action</b>||<b>stack effect</b>||
-||{?}||expand||( token -- )||
 ||{+}||plus||( n1 n2 -- n1+n2 )||
 ||{++}||increment||( n -- n+1 ) or ( name -- )||
 ||{--}||decrement||( n -- n-1 ) or ( name -- )||
 ||{.m}||list macros||( -- )||
 ||{.s}||display stack||( -- )||
+||{?}||expand||( token -- )||
 ||{drop}||drop||( x -- )||
 ||{dup}||duplicate||( x -- x x )||
 ||{if}||if||( x -- )||
 ||{over}||over||( x1 x2 -- x1 x2 x1 )||
+||{repeat}||repeat||( -- )||
 
 <br/>   
  ...unfinished - more to come
