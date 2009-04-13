@@ -256,7 +256,7 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
  {--} ( n -- n-1) or ( name -- )
 
- not yet implemented...
+ implemented...
 
 ===5.4.5 {.m} - display macro definitions===
 
@@ -274,21 +274,28 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
  {drop} ( x -- )
 
- not yet implemented...
+ implemented...
 
 ===5.4.8 {dup} - duplicate top of stack===
 
  {dup} ( x -- x x )
 
- not yet implemented...
+ implemented...
 
-===5.4.9 {over} - duplicate next of stack===
+===5.4.9 {if} - if control-flow===
+
+ {if} ( x -- )
+
+ implemented...
+
+
+===5.4.10 {over} - duplicate next of stack===
 
  {over} ( x1 x2 -- x1 x2 x1 )
 
- not yet implemented...
+ implemented...
 
-===5.4.10 [unfinished - more to come]===
+===5.4.11 [unfinished - more to come]===
 
 
 =6 Macros with arguments=
@@ -320,6 +327,7 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 ||{.s}||display stack||( -- )||
 ||{drop}||drop||( x -- )||
 ||{dup}||duplicate||( x -- x x )||
+||{if}||if||( x -- )||
 ||{over}||over||( x1 x2 -- x1 x2 x1 )||
 
 <br/>   
