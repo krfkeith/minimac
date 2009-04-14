@@ -61,6 +61,7 @@
  ```foo```Hello World!```<br/>
  ```foo ```Hello World!```<br/>
  ```foo This is an example ```Hello World!```<br/>
+ ```foo ( -- ) ```Hello World!```<br/>
 </b></tt>
 
  Macro names are case sensitive:
