@@ -239,7 +239,9 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
 ==5.4 Catalog of built-ins==
 
-===5.4.1 {+} - plus===
+===5.4.1 Arithmetic===
+
+==== {+} - plus====
 
  {+} ( n1 n2 -- n1+n2 )
 
@@ -263,7 +265,7 @@ For example the increment built-in, whose name is '{++}', is used to increment a
  =>-------<br/>
 </b></tt>
 
-===5.4.2 {++} - increment===
+===={++} - increment====
 
  {++} ( n -- n+1) or ( name -- )
 
@@ -273,7 +275,7 @@ For example the increment built-in, whose name is '{++}', is used to increment a
  Example:
   ...coming soon
 
-===5.4.3 {--} - decrement===
+===={--} - decrement====
 
  {--} ( n -- n-1) or ( name -- )
 
@@ -283,43 +285,38 @@ For example the increment built-in, whose name is '{++}', is used to increment a
  Example:
   ...coming soon
 
-===5.4.4 {.m} - display macro definitions===
+===5.4.2 Comparison===
 
- {.m} ( -- )
+||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
+||{=}||n1 n2 -- -1|0||equal||
+||{<}||n1 n2 -- -1|0||less-than||
+||{<=}||n1 n2 -- -1|0||less-than or-equal||
+||{>}||n1 n2 -- -1|0||greater-than||
+||{>=}||n1 n2 -- -1|0||greater-than or-equal||
 
- implemented...
+===5.4.3 Stack manipulations===
 
-===5.4.5 {.s} - display stack contents===
-
- {.s} ( -- )
-
- implemented...
-
-===5.4.6 {?} - expand===
-
- {?} ( token -- )
-
- implemented...
-
-===5.4.6 {@} - fetch===
-
- {@} ( name -- value )
-
- implemented...
-
-===5.4.7 {drop} - drop top of stack===
+===={drop} - drop top of stack====
 
  {drop} ( x -- )
 
  implemented...
 
-===5.4.8 {dup} - duplicate top of stack===
+===={dup} - duplicate top of stack====
 
  {dup} ( x -- x x )
 
  implemented...
 
-===5.4.9 {if} - if control-flow===
+===={over} - duplicate next of stack====
+
+ {over} ( x1 x2 -- x1 x2 x1 )
+
+ implemented...
+
+===5.4.4 Control-flow===
+
+===={if} - conditional execution====
 
  {if} ( x -- x| )
 
@@ -327,21 +324,45 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
  Example:
  ...coming soon...
-===5.4.10 {over} - duplicate next of stack===
 
- {over} ( x1 x2 -- x1 x2 x1 )
-
- implemented...
-
-===5.4.11 {repeat} - repeat control-flow===
+===={repeat} - looping====
 
  {repeat} ( -- )
 
  Repeats the expansion of the enclosing definition.
 
-===5.4.12 [unfinished - more to come]===
+===5.4.5 Diagnostic utilities===
 
- ????
+===={.m} - display macro definitions====
+ {.m} ( -- )
+
+ implemented...
+
+===={.s} - display stack contents====
+
+ {.s} ( -- )
+
+ implemented...
+
+===5.4.6 (...not yet sorted, more to come...)===
+
+===={?} - expand====
+
+ {?} ( token -- )
+
+ implemented...
+
+===={@} - fetch====
+
+ {@} ( name -- value )
+
+ implemented...
+
+===={define} - create a definition from stack items====
+
+ {define} ( name body -- )
+
+ implemented...
 
 =6 Sample Macros=
 
@@ -378,6 +399,7 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 ||{if}||if||( x -- )||
 ||{over}||over||( x1 x2 -- x1 x2 x1 )||
 ||{repeat}||repeat||( -- )||
+...incomplete...
 
 <br/>   
  ...unfinished - more to come
