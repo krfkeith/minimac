@@ -137,6 +137,10 @@
  =>George's car<br/>
 </b></tt>
 
+==3.6 Disabling white-space expansion within definitions==
+
+...explanation of use of '[' and ']' within a definition body...
+
 =4 Escaping=
 
 ==4.1 The escape character==
