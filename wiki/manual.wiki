@@ -326,13 +326,16 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
  Repeats the expansion of the enclosing definition.
 
+ Example:
+ ...coming soon...
+
 ===5.4.5 Strings===
 
-===={len} - string length===
+===={len} - string length====
 
  {len} ( str -- u )
 
-===={len} - string length===
+===={substr} - extract a substring====
 
  {substr} ( str start length -- str' )
 
