@@ -241,11 +241,11 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
 ===5.4.1 Arithmetic===
 
-==== {+} - plus====
-
- {+} ( n1 n2 -- n1+n2 )
-
- Add n2 to n1, giving the sum n1+n2
+||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
+||{+}||n1 n2 -- n1+n2||add||
+||{-}||n1 n2 -- n1-n2||subtract||
+||{*}||n1 n2 -- n1*n2||multiply||
+...incomplete
 
  Example:
 
@@ -294,25 +294,14 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 ||{>}||n1 n2 -- -1|0||greater-than||
 ||{>=}||n1 n2 -- -1|0||greater-than or-equal||
 
+
 ===5.4.3 Stack manipulations===
 
-===={drop} - drop top of stack====
+||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
+||{drop}||x -- ||drop top of stack||
+||{dup}||x -- x x||duplicate top of stack||
+||{over}||x1 x2 -- x1 x2 x1||duplicate next of stack||
 
- {drop} ( x -- )
-
- implemented...
-
-===={dup} - duplicate top of stack====
-
- {dup} ( x -- x x )
-
- implemented...
-
-===={over} - duplicate next of stack====
-
- {over} ( x1 x2 -- x1 x2 x1 )
-
- implemented...
 
 ===5.4.4 Control-flow===
 
@@ -331,7 +320,17 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
  Repeats the expansion of the enclosing definition.
 
-===5.4.5 Diagnostic utilities===
+===5.4.5 Strings===
+
+===={len} - string length===
+
+ {len} ( str -- u )
+
+===={len} - string length===
+
+ {substr} ( str start length -- str' )
+
+===5.4.6 Diagnostic utilities===
 
 ===={.m} - display macro definitions====
  {.m} ( -- )
@@ -344,7 +343,7 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 
  implemented...
 
-===5.4.6 (...not yet sorted, more to come...)===
+===5.4.7 (...not yet sorted, more to come...)===
 
 ===={?} - expand====
 
@@ -361,6 +360,12 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 ===={define} - create a definition from stack items====
 
  {define} ( name body -- )
+
+ implemented...
+
+===={~} - bit-wise not====
+
+ {~} ( x -- ~x )
 
  implemented...
 
