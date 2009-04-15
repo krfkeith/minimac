@@ -386,8 +386,8 @@ For example the increment built-in, whose name is '{++}', is used to increment a
 ||\||escape||
 ||&||push||
 ||^||self-reference||
-||[||white spaces expanded as $ when defining||
-||]||restore default white spaces expansion when defining||
+||[||white spaces expanded as $, used when defining||
+||]||restore default white space expansion, used when defining||
 
 ==Buit-ins:==
 
