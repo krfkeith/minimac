@@ -160,6 +160,8 @@
  =>a$test$e<br/>
 </b></tt>
 
+[...STD should we use a character other than '\' as the escape character?...]
+
 =5 Built-in functions=
 
 ==5.1 How to use to built-ins==
