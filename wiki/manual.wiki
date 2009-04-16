@@ -12,7 +12,7 @@
 
  Minimac is a minimalist macro processor that is intended as a front end preprocessor for little language compilers.
 
- Minimac is open source project. The project's home page on Google Code is http://code.google.com/p/minimac/
+ Minimac is open source software. The project's home page on Google Code is http://code.google.com/p/minimac/
 
  Minimac is written in C, and distributed under a BSD license.
 
