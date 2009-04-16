@@ -37,6 +37,7 @@
   * gpp     http://en.nothingisreal.com/wiki/GPP
 
  The Wikipedia page on General Purpose Macro Processors gives an overview of this category of software: http://en.wikipedia.org/wiki/General_purpose_macro_processor
+
 =2 Invoking minimac=
 
  The minimac executable is named 'mm'.
@@ -90,8 +91,8 @@
  {.m}<br/>
  =>-------<br/>
  =>Macros (2):<br/>
- =>d[1] => name[2nd] value[another macro]<br/>
- =>d[0] => name[1st] value[my first macro]<br/>
+ `=>d[1] => name[2nd] value[another macro]`<br/>
+ `=>d[0] => name[1st] value[my first macro]`<br/>
  =>-------
 
 ==3.2 Redefining a macro==
