@@ -366,7 +366,14 @@
 
  {substr} ( str start length -- str' )
 
-===5.4.6 Diagnostic utilities===
+===5.4.6 Bitwise===
+
+||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
+||~||n -- ~n||bitwise not||
+||&||n1 n2 -- n1&n2||bitwise and||
+||`|`||n1 n2 -- n1`|`n2||bitwise or||
+
+===5.4.7 Diagnostic utilities===
 
 ===={.m} - display macro definitions====
  {.m} ( -- )
@@ -379,7 +386,7 @@
 
  implemented...
 
-===5.4.7 (...not yet sorted, more to come...)===
+===5.4.8 (...not yet sorted, more to come...)===
 
 ===={?} - expand====
 
@@ -396,12 +403,6 @@
 ===={define} - create a definition from stack items====
 
  {define} ( name body -- )
-
- implemented...
-
-===={~} - bit-wise not====
-
- {~} ( x -- ~x )
 
  implemented...
 
