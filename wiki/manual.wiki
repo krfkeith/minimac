@@ -61,7 +61,7 @@
  =>Hello World!<br/>
 </b></tt>
 
- Any text between the first space after end of the name and the body of the definition is ignored. The following three examples are equivalent:
+ Any text between the first space after end of the name and the body of the definition is ignored. The following examples are equivalent:
 
 <tt><b>
  ```foo```Hello World!```<br/>
