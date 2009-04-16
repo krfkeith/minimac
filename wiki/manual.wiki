@@ -85,7 +85,7 @@
  The diagnostic built-in *{.m}* displays a list of the names and current values of user-defined macros:
 
 <tt><b>
- ```1st```my very first macro```<br/>
+ ```1st```my first macro```<br/>
  =><br/>
  ```2nd```another macro```<br/>
  =><br/>
@@ -348,7 +348,13 @@
  Repeats the expansion of the enclosing definition.
 
  Example:
- ...coming soon...
+
+<tt><b>
+ ```stars```[{if} {--} * {repeat}]```<br/>
+ =><br/>
+ 3& stars<br/>
+ =>`***`<br/>
+</b></tt>
 
 ===5.4.5 Strings===
 
