@@ -51,7 +51,7 @@
 ==3.1 Defining a basic substitution macro==
 
  A macro definition is composed of a name and a body. 
- A macro definition begins with the backquote character ` (upper left key on most keyboards) followed by the macro name. A second backquote begins the body of the definition, and a third backquote ends the definition.
+ A macro definition begins with the backquote character *`* (upper left key on most keyboards) followed by the macro name. A second backquote begins the body of the definition, and a third backquote ends the definition.
 
  The following example defines the macro 'foo' that expands to `Hello world!'
 
@@ -82,7 +82,7 @@
  =>Hello<br/>
 </b></tt>
 
- The diagnostic built-in {.m} displays a list of the names and current values of user-defined macros:
+ The diagnostic built-in *{.m}* displays a list of the names and current values of user-defined macros:
 
 <tt><b>
  ```1st```my very first macro```<br/>
@@ -131,7 +131,7 @@
 
 ==3.4 Self-referential macros==
 
- The caret '^' character in the body of a macro expands to the latest definition of the same name as the macro which contains it.
+ The caret '*^*' character in the body of a macro expands to the latest definition of the same name as the macro which contains it.
 
 <tt><b>
  ```greet```hello```<br/>
@@ -146,7 +146,7 @@
 
 ==3.5 Embedded macro names==
 
- To expand a macro name that is adjacent to a non-whitespace character, place a dollar '$' character between the name and the non-whitespace character:
+ To expand a macro name that is adjacent to a non-whitespace character, place a dollar '*$*' character between the name and the non-whitespace character:
 
 <tt><b>
  ```what```car```<br/>
@@ -161,13 +161,13 @@
 
 ==3.6 Disabling white-space expansion within definitions==
 
-...explanation of use of '[' and ']' within a definition body...
+...explanation of use of '*[*' and '*]*' within a definition body...
 
 =4 Escaping=
 
 ==4.1 The escape character==
 
- The backslash '\' character is used as an escape character, i.e. the character immediately following the backslash is interpreted literally.
+ The backslash '*\*' character is used as an escape character, i.e. the character immediately following the backslash is interpreted literally.
 
 <tt><b>
  ```test```bcd```<br/>
@@ -188,13 +188,13 @@
 
 ==5.1 How to use to built-ins==
 
- Built-in are special names that invoke useful behavior or side-effects when expanded. For example the increment built-in, whose name is '{++}', is used to increment a number. 
+ Built-in are special names that invoke useful behavior or side-effects when expanded. For example the increment built-in, whose name is '*{++}*', is used to increment a number. 
  
 ==5.2 The macro argument stack==
  
  When a built-in requires one or more arguments, these are taken from the macro argument stack. 
  
- The contents of the argument stack can be displayed at any time for diagnostic purposes by invoking the {.s} built-in.
+ The contents of the argument stack can be displayed at any time for diagnostic purposes by invoking the '*{.s}*' built-in.
 
 <tt><b> 
  {.s}<br/>
@@ -204,7 +204,7 @@
  =>-------<br/>
 </b></tt>
 
- To push an item, usually a token, onto the stack, append the ampersand character '&' to it:
+ To push an item, usually a token, onto the stack, append the ampersand character '*&*' to it:
 
 <tt><b> 
  5&<br/>
@@ -233,7 +233,7 @@
  =>-------<br/>
 </b></tt>
 
- Use the expand `{?}' built-in to pop the top item off and expand it.
+ Use the expand `*{?}*' built-in to pop the top item off and expand it.
 
 <tt><b> 
  {?}<br/>
@@ -258,7 +258,7 @@
  
  The stack effect diagram documents the items that are required to be on the stack before the built-in is invoked, and the after-effect on the stack of the built-in's invocation.
  
- For example, the stack effect for the '{+}' built-in is '( n1 n2 -- n1+n2 )', meaning that it expects two (decimal) integers on the stack, which it will remove, and leave their sum in their place.
+ For example, the stack effect for the '*{+}*' built-in is '( n1 n2 -- n1+n2 )', meaning that it expects two (decimal) integers on the stack, which it will remove, and leave their sum in their place.
  
  In both the before and after sections of the stack diagram the rightmost item is considered to be at the top of the stack.
  
