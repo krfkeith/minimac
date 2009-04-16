@@ -2,7 +2,7 @@
 
 <font size="5" color="green">minimac - a minimalist macro processor</font><br/>
 
-<wiki:toc max_depth="1" />
+<wiki:toc max_depth="2" />
 
 =1 Introduction=
 
@@ -272,7 +272,8 @@
 ||{+}||n1 n2 -- n1+n2||add||
 ||{-}||n1 n2 -- n1-n2||subtract||
 ||{`*`}||n1 n2 -- n1*n2||multiply||
-...incomplete
+||{/}||n1 n2 -- n1/n2||divide||
+||{%}||n1 n2 -- n1%n2||mod||
 
  Example:
 
@@ -369,9 +370,9 @@
 ===5.4.6 Bitwise===
 
 ||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
-||~||n -- ~n||bitwise not||
-||&||n1 n2 -- n1&n2||bitwise and||
-||`|`||n1 n2 -- n1`|`n2||bitwise or||
+||{~}||n -- ~n||bitwise not||
+||{&}||n1 n2 -- n1&n2||bitwise and||
+||{`|`}||n1 n2 -- n1`|`n2||bitwise or||
 
 ===5.4.7 Diagnostic utilities===
 
