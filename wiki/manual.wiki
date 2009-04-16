@@ -271,7 +271,7 @@
 ||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
 ||{+}||n1 n2 -- n1+n2||add||
 ||{-}||n1 n2 -- n1-n2||subtract||
-||{'*'}||n1 n2 -- n1*n2||multiply||
+||{`*`}||n1 n2 -- n1*n2||multiply||
 ...incomplete
 
  Example:
