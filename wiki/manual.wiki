@@ -357,6 +357,10 @@
 
 ==5.5 Strings==
 
+==={cat} - concatenate strings===
+
+ {cat} ( str1 str2 -- str )
+
 ==={len} - string length===
 
  {len} ( str -- u )
