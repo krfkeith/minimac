@@ -204,7 +204,7 @@
  =>-------<br/>
 </b></tt>
 
- To push an item, usually a token, onto the stack, append the ampersand character '*&*' to it:
+ To push an item, usually a token, onto the stack, append the ampersand character '*&*' to it, whitespace immediately following the '*&*' is ignored.
 
 <tt><b> 
  5&<br/>
