@@ -163,9 +163,7 @@
 
 ...explanation of use of '*[*' and '*]*' within a definition body...
 
-=4 Escaping=
-
-==4.1 The escape character==
+==3.7 Escaping==
 
  The backslash '*\*' character is used as an escape character, i.e. the character immediately following the backslash is interpreted literally.
 
@@ -184,13 +182,13 @@
 
 [...STD should we use a character other than '\' as the escape character?...]
 
-=5 Built-in functions=
+=4 Built-in functions=
 
-==5.1 How to use to built-ins==
+==4.1 How to use to built-ins==
 
  Built-in are special names that invoke useful behavior or side-effects when expanded. For example the increment built-in, whose name is '*{++}*', is used to increment a number. 
  
-==5.2 The macro argument stack==
+==4.2 The macro argument stack==
  
  When a built-in requires one or more arguments, these are taken from the macro argument stack. 
  
@@ -252,7 +250,7 @@
  =>-------<br/>
 </b></tt>
  
-==5.3 Stack effect notation==
+==4.3 Stack effect notation==
 
  The following section is a catalog of the minimac's built-ins, included with each built-in's description is a stack effect diagram, in a notation similar to that used by the Forth language, a stack-based language which inspired much of minimac's philosophy and design.
  
@@ -264,9 +262,9 @@
  
  The stack effect diagram '( -- )' denotes a built-in that has no expectations of the stack nor after-effects on the stack.
 
-==5.4 Catalog of built-ins==
+=5 Catalog of built-ins=
 
-===5.4.1 Arithmetic===
+==5.1 Arithmetic==
 
 ||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
 ||{+}||n1 n2 -- n1+n2||add||
@@ -293,7 +291,7 @@
  =>-------<br/>
 </b></tt>
 
-===={++} - increment====
+==={++} - increment===
 
  {++} ( n -- n+1) or ( name -- )
 
@@ -303,7 +301,7 @@
  Example:
   ...coming soon
 
-===={--} - decrement====
+==={--} - decrement===
 
  {--} ( n -- n-1) or ( name -- )
 
@@ -313,7 +311,7 @@
  Example:
   ...coming soon
 
-===5.4.2 Comparison===
+==5.2 Comparison==
 
 ||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
 ||{=}||n1 n2 -- -1|0||equal||
@@ -323,7 +321,7 @@
 ||{>=}||n1 n2 -- -1|0||greater-than or-equal||
 
 
-===5.4.3 Stack manipulations===
+==5.3 Stack manipulations==
 
 ||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
 ||{drop}||x -- ||drop top of stack||
@@ -331,9 +329,9 @@
 ||{over}||x1 x2 -- x1 x2 x1||duplicate next of stack||
 
 
-===5.4.4 Control-flow===
+==5.4 Control-flow==
 
-===={if} - conditional execution====
+==={if} - conditional execution===
 
  {if} ( x -- x| )
 
@@ -342,7 +340,7 @@
  Example:
  ...coming soon...
 
-===={repeat} - looping====
+==={repeat} - looping===
 
  {repeat} ( -- )
 
@@ -357,51 +355,51 @@
  =>`***`<br/>
 </b></tt>
 
-===5.4.5 Strings===
+==5.5 Strings==
 
-===={len} - string length====
+==={len} - string length===
 
  {len} ( str -- u )
 
-===={substr} - extract a substring====
+==={substr} - extract a substring===
 
  {substr} ( str start length -- str' )
 
-===5.4.6 Bitwise===
+==5.6 Bitwise==
 
 ||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
 ||{~}||n -- ~n||bitwise not||
 ||{&}||n1 n2 -- n1&n2||bitwise and||
 ||{`|`}||n1 n2 -- n1`|`n2||bitwise or||
 
-===5.4.7 Diagnostic utilities===
+==5.7 Diagnostic utilities==
 
-===={.m} - display macro definitions====
+==={.m} - display macro definitions===
  {.m} ( -- )
 
  implemented...
 
-===={.s} - display stack contents====
+==={.s} - display stack contents===
 
  {.s} ( -- )
 
  implemented...
 
-===5.4.8 (...not yet sorted, more to come...)===
+==5.8 (...not yet sorted, more to come...)==
 
-===={?} - expand====
+==={?} - expand===
 
  {?} ( token -- )
 
  implemented...
 
-===={@} - fetch====
+==={@} - fetch===
 
  {@} ( name -- value )
 
  implemented...
 
-===={define} - create a definition from stack items====
+==={define} - create a definition from stack items===
 
  {define} ( name body -- )
 
