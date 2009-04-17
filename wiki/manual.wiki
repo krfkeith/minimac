@@ -405,13 +405,7 @@
 
 ==={!} - store===
 
- {@} ( name value -- )
-
- implemented...
-
-==={define} - create a definition from stack items===
-
- {define} ( name body -- )
+ {!} ( value name -- )
 
  implemented...
 
