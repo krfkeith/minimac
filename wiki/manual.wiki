@@ -413,7 +413,9 @@
 
 ==={include} - file inclusion===
 
- {include} ( name -- )
+ {include} ( filename -- )
+
+ Causes the file named to be read and expanded.
 
  implemented...
 
