@@ -392,11 +392,17 @@
 
 ==5.8 (...not yet sorted, more to come...)==
 
+==={.} - print===
+
+ {.} ( str -- )
+
+ Print the top of stack without expansion.
+
 ==={?} - expand===
 
  {?} ( token -- )
 
- implemented...
+ Expand the top of stack. 
 
 ==={@} - fetch===
 
@@ -416,7 +422,11 @@
 
  Causes the file named to be read and expanded.
 
- implemented...
+==={last} - last dictionary definition===
+
+ {last} ( -- name )
+
+ Returns the name of the most recent user-defined macro.
 
 =6 Sample Macros=
 
