@@ -183,6 +183,10 @@
 
 [...STD should we use a character other than '\' as the escape character?...]
 
+==3.8 Quoting==
+
+ A string surrounded by the double-quote '*"*' is output as a literal string (i.e. without expansion.
+
 =4 Built-in functions=
 
 ==4.1 How to use to built-ins==
@@ -332,6 +336,12 @@
 
 ==5.4 Control-flow==
 
+==={exit} - exiting to the OS===
+
+ {exit} ( n -- ) or {exit} ( -- )
+
+ Exits to the OS using the top of stack as the exit code. If the stack is empty when {exit} is invoked a default exit code of 0 is used. 
+
 ==={if} - conditional execution===
 
  {if} ( x -- x| )
@@ -445,6 +455,7 @@
 ||\||escape||
 ||&||push||
 ||^||self-reference||
+||"||quote||
 ||[||white spaces expanded as $, used when defining||
 ||]||restore default white space expansion, used when defining||
 
@@ -463,7 +474,7 @@
 ||{if}||if||( x -- )||
 ||{over}||over||( x1 x2 -- x1 x2 x1 )||
 ||{repeat}||repeat||( -- )||
-...incomplete...
+...incomplete list see rest of manual...
 
 <br/>   
  ...unfinished - more to come
