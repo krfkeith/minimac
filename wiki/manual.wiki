@@ -160,11 +160,7 @@
  =>George's car<br/>
 </b></tt>
 
-==3.6 Disabling white-space expansion within definitions==
-
-...explanation of use of '*`[`*' and '*`]`*' within a definition body...
-
-==3.7 Escaping==
+==3.6 Escaping==
 
  The backslash '*\*' character is used as an escape character, i.e. the character immediately following the backslash is interpreted literally.
 
@@ -183,7 +179,7 @@
 
 [...STD should we use a character other than '\' as the escape character?...]
 
-==3.8 Quoting==
+==3.7 Quoting==
 
  A string surrounded by the double-quote '*"*' is output as a literal string (i.e. without expansion.
 
@@ -360,7 +356,7 @@
  Example:
 
 <tt><b>
- ```stars```[{if} {--} `*` {repeat}]```<br/>
+ ```stars```{if}${--}$`*`${repeat}```<br/>
  =><br/>
  3& stars<br/>
  =>`***`<br/>
@@ -370,7 +366,7 @@
 
 ==={cat} - concatenate strings===
 
- {cat} ( str1 str2 -- str )
+ {cat} ( str1 str2 -- str2+str1 )
 
 ==={len} - string length===
 
@@ -456,8 +452,6 @@
 ||&||push||
 ||^||self-reference||
 ||"||quote||
-||[||white spaces expanded as $, used when defining||
-||]||restore default white space expansion, used when defining||
 
 ==Buit-ins:==
 
