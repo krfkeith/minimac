@@ -179,7 +179,11 @@
 
 [...STD should we use a character other than '\' as the escape character?...]
 
-==3.7 Quoting==
+==3.7 Ignoring whitespace within a definition==
+
+ The left-bracket '*[*' and right-bracket '*]*' characters toggle the expansion of whitespace within a definition off and on respectively.
+
+==3.8 Quoting==
 
  A string surrounded by the double-quote '*"*' is output as a literal string (i.e. without expansion.
 
@@ -356,7 +360,7 @@
  Example:
 
 <tt><b>
- ```stars```{if}${--}$`*`${repeat}```<br/>
+ ```stars```[ {if} {--} `*` {repeat} ]```<br/>
  =><br/>
  3& stars<br/>
  =>`***`<br/>
