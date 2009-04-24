@@ -272,11 +272,11 @@
 ==5.1 Arithmetic==
 
 ||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
-||{+}||n1 n2 -- n1+n2||add||
-||{-}||n1 n2 -- n1-n2||subtract||
-||{`*`}||n1 n2 -- n1*n2||multiply||
-||{/}||n1 n2 -- n1/n2||divide||
-||{%}||n1 n2 -- n1%n2||mod||
+||{+}||( n1 n2 -- n1+n2 )||add||
+||{-}||( n1 n2 -- n1-n2 )||subtract||
+||{`*`}||( n1 n2 -- n1*n2 )||multiply||
+||{/}||( n1 n2 -- n1/n2 )||divide||
+||{%}||( n1 n2 -- n1%n2 )||mod||
 
  Example:
 
@@ -298,7 +298,7 @@
 
 ==={++} - increment===
 
- {++} ( n -- n+1) or ( name -- )
+ {++} ( n -- n+1 ) or ( name -- )
 
  If the top stack item is a name, its body is incremented, 
  otherwise the top stack item is treated as a literal and incremented in place. 
@@ -308,7 +308,7 @@
 
 ==={--} - decrement===
 
- {--} ( n -- n-1) or ( name -- )
+ {--} ( n -- n-1 ) or ( name -- )
 
  If the top stack item is a name, its body is decremented, 
  otherwise the top stack item is treated as a literal and decremented in place. 
@@ -319,24 +319,24 @@
 ==5.2 Comparison==
 
 ||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
-||{=}||n1 n2 -- -1|0||equal||
-||{<}||n1 n2 -- -1|0||less-than||
-||{<=}||n1 n2 -- -1|0||less-than or-equal||
-||{>}||n1 n2 -- -1|0||greater-than||
-||{>=}||n1 n2 -- -1|0||greater-than or-equal||
+||{=}||( n1 n2 -- -1|0 )||equal||
+||{<}||( n1 n2 -- -1|0 )||less-than||
+||{<=}||( n1 n2 -- -1|0 )||less-than or-equal||
+||{>}||( n1 n2 -- -1|0 )||greater-than||
+||{>=}||( n1 n2 -- -1|0 )||greater-than or-equal||
 
 
 ==5.3 Stack manipulations==
 
 ||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
-||{drop}||x -- ||drop top of stack||
-||{dup}||x -- x x||duplicate top of stack||
-||{over}||x1 x2 -- x1 x2 x1||duplicate next of stack||
+||{drop}||( x -- )||drop top of stack||
+||{dup}||( x -- x x )||duplicate top of stack||
+||{over}||( x1 x2 -- x1 x2 x1 )||duplicate next of stack||
 
 ==5.4 Auxiliary stack==
 
-||{pop}|| -- x *aux:* x -- ||pop from auxiliary stack||
-||{push}||x -- *aux:* -- x ||push to auxiliary stack||
+||{pop}||( -- x ) *aux:*( x -- )||pop from auxiliary stack||
+||{push}||( x -- ) *aux:*( -- x )||push to auxiliary stack||
 
 
 ==5.5 Control-flow==
@@ -392,9 +392,9 @@
 ==5.7 Bitwise==
 
 ||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
-||{~}||n -- ~n||bitwise not||
-||{&}||n1 n2 -- n1&n2||bitwise and||
-||{`|`}||n1 n2 -- n1`|`n2||bitwise or||
+||{~}||( n -- ~n )||bitwise not||
+||{&}||( n1 n2 -- n1&n2 )||bitwise and||
+||{`|`}||( n1 n2 -- n1`|`n2 )||bitwise or||
 
 ==5.8 Diagnostic utilities==
 
@@ -452,10 +452,10 @@
 
  Extension macros are supplied in the '*extend.mm*' file.
 
-||{>>aux}||x -- x *aux:* -- x||copy to auxiliary stack||
-||{aux>>}||-- x *aux:* x -- x||copy from auxiliary stack||
-||{2dup}||x y -- x y x y||duplicate to two stack item||
-||{tuck}||x y -- y x y||
+||{>>aux}||( x -- x ) *aux:*( -- x )||copy to auxiliary stack||
+||{aux>>}||( -- x ) *aux:*( x -- x )||copy from auxiliary stack||
+||{2dup}||( x y -- x y x y )||duplicate to two stack item||
+||{tuck}||( x y -- y x y )||
 
 =7 Sample macros=
 
@@ -478,23 +478,7 @@
 
 ==Buit-ins:==
 
-||<b>name</b>||<b>action</b>||<b>stack effect</b>||
-||{+}||plus||( n1 n2 -- n1+n2 )||
-||{++}||increment||( n -- n+1 ) or ( name -- )||
-||{--}||decrement||( n -- n-1 ) or ( name -- )||
-||{.m}||list macros||( -- )||
-||{.s}||display stack||( -- )||
-||{?}||expand||( token -- )||
-||{@}||fetch||( name -- value )||
-||{drop}||drop||( x -- )||
-||{dup}||duplicate||( x -- x x )||
-||{if}||if||( x -- )||
-||{over}||over||( x1 x2 -- x1 x2 x1 )||
-||{repeat}||repeat||( -- )||
-||[||toggle whitespaces off within a definition||
-||]||replace whitespaces on within a definition||
-
-...incomplete list see rest of manual...
+...unfinished see rest of manual...
 
 <br/>   
  ...unfinished - more to come
