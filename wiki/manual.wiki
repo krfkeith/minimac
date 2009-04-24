@@ -335,8 +335,8 @@
 
 ==5.4 Auxiliary stack==
 
-||{pop}|| -- x aux: x -- ||pop from auxiliary stack||
-||{push}||x -- aux: -- x ||push to auxiliary stack||
+||{pop}|| -- x *aux:* x -- ||pop from auxiliary stack||
+||{push}||x -- *aux:* -- x ||push to auxiliary stack||
 
 
 ==5.5 Control-flow==
@@ -452,8 +452,8 @@
 
  Extension macros are supplied in the '*extend.mm*' file.
 
-||{>>aux}||x -- x aux: -- x||copy to auxiliary stack||
-||{aux>>}||-- x aux: x -- x||copy from auxiliary stack||
+||{>>aux}||x -- x *aux:* -- x||copy to auxiliary stack||
+||{aux>>}||-- x *aux:* x -- x||copy from auxiliary stack||
 ||{2dup}||x y -- x y x y||duplicate to two stack item||
 ||{tuck}||x y -- y x y||
 
