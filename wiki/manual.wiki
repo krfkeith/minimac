@@ -333,7 +333,7 @@
 ||{dup}||x -- x x||duplicate top of stack||
 ||{over}||x1 x2 -- x1 x2 x1||duplicate next of stack||
 
-==5.4 Auxiliary Stack==
+==5.4 Auxiliary stack==
 
 ||{pop}|| -- x aux: x -- ||pop from auxiliary stack||
 ||{push}||x -- aux: -- x ||push to auxiliary stack||
