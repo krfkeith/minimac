@@ -333,8 +333,13 @@
 ||{dup}||x -- x x||duplicate top of stack||
 ||{over}||x1 x2 -- x1 x2 x1||duplicate next of stack||
 
+==5.4 Auxiliary Stack==
 
-==5.4 Control-flow==
+||{pop}|| -- x aux: x -- ||pop from auxiliary stack||
+||{push}||x -- aux: -- x ||push to auxiliary stack||
+
+
+==5.5 Control-flow==
 
 ==={exit} - exiting to the OS===
 
@@ -366,7 +371,11 @@
  =>`***`<br/>
 </b></tt>
 
-==5.5 Strings==
+==5.6 Strings==
+
+==={append} - append to a string variable===
+
+ {append} ( str name -- )
 
 ==={cat} - concatenate strings===
 
@@ -380,27 +389,28 @@
 
  {substr} ( str start length -- str' )
 
-==5.6 Bitwise==
+==5.7 Bitwise==
 
 ||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
 ||{~}||n -- ~n||bitwise not||
 ||{&}||n1 n2 -- n1&n2||bitwise and||
 ||{`|`}||n1 n2 -- n1`|`n2||bitwise or||
 
-==5.7 Diagnostic utilities==
+==5.8 Diagnostic utilities==
+
+==={.a} - display auxiliary stack contents===
+
+ {.a} ( -- )
 
 ==={.m} - display macro definitions===
- {.m} ( -- )
 
- implemented...
+ {.m} ( -- )
 
 ==={.s} - display stack contents===
 
  {.s} ( -- )
 
- implemented...
-
-==5.8 (...not yet sorted, more to come...)==
+==5.9 (...not yet sorted, more to come...)==
 
 ==={.} - print===
 
@@ -438,11 +448,20 @@
 
  Returns the name of the most recent user-defined macro.
 
-=6 Sample Macros=
+=6 Extensions=
+
+ Extension macros are supplied in the '*extend.mm*' file.
+
+||{>>aux}||x -- x aux: -- x||copy to auxiliary stack||
+||{aux>>}||-- x aux: x -- x||copy from auxiliary stack||
+||{2dup}||x y -- x y x y||duplicate to two stack item||
+||{tuck}||x y -- y x y||
+
+=7 Sample macros=
 
  ...coming soon...
 
-=7 Quirks and limitations=
+=8 Quirks and limitations=
 
  unfinished...
 
