@@ -381,6 +381,10 @@
 
  {cat} ( str1 str2 -- str2+str1 )
 
+==={empty} - empty a string===
+
+ {empty} ( name -- )
+
 ==={len} - string length===
 
  {len} ( str -- u )
