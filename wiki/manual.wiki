@@ -489,7 +489,9 @@
 ||<b>{>>aux}</b>||( x -- x ) aux:( -- x )||copy to auxiliary stack||
 ||<b>{aux>>}</b>||( -- x ) aux:( x -- x )||copy from auxiliary stack||
 ||<b>{2dup}</b>||( x y -- x y x y )||duplicate to two stack item||
-||<b>{tuck}</b>||( x y -- y x y )||
+||<b>{empty?}</b>||( name -- -1|0)||test if macro is empty||
+||<b>{rot}</b>||( x y z -- y z x )||||
+||<b>{tuck}</b>||( x y -- y x y )||||
 
 =7 Sample macros=
 
