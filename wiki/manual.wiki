@@ -203,7 +203,7 @@
 
 ==3.7 Ignoring whitespace within a definition==
 
- The left-bracket '*[*'  character within a definition causes runs of whitespace to be replaced by runs of the dollar '*$*' character. The right-bracket '*]*' resumes normal whitespace expansion.
+ The left-bracket '*`[`*'  character within a definition causes runs of whitespace to be replaced by runs of the dollar '*$*' character. The right-bracket '*`]`*' resumes normal whitespace expansion.
 
 ==3.8 Quoting==
 
