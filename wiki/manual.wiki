@@ -199,7 +199,7 @@
  =>a$test$e<br/>
 </b></tt>
 
-'['...STD should we use a character other than '\' as the escape character?...']'
+{{{ [...STD should we use a character other than '\' as the escape character?...] }}}
 
 ==3.7 Ignoring whitespace within a definition==
 
