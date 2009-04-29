@@ -1,8 +1,9 @@
 #summary List of enhancements being considered
 
 ||#||<b>enhancement</b>||<b>status</b>||<b>notes</b>||
-||1||output diversions||planned||||
+||1||<s>output diversions</s>||done||{divert} {undivert}||
 ||2||single-line comments||planned||||
 ||3||multi-line comments||under consideration||||
 ||4||user-configurable special characters||under consideration||||
-||5||{verbatim}||planned||non-expanding version of {include}||
+||5||<s>{verbatim}</s>||done||non-expanding version of {include}||
+||6||shell commands||planned||||
