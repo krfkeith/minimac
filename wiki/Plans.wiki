@@ -5,5 +5,5 @@
 ||2||single-line comments||planned||||
 ||3||multi-line comments||under consideration||||
 ||4||user-configurable special characters||under consideration||||
-||5||<s>{verbatim}</s>||done||non-expanding version of {include}||
+||5||<s>non-expanding version of {include}</s>||done||{verbatim}||
 ||6||shell commands||planned||||
