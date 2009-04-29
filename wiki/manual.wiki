@@ -490,7 +490,7 @@
 ||<b>{empty?}</b>||( name -- -1|0)||test if macro is empty||
 ||<b>{rot}</b>||( x y z -- y z x )||||
 ||<b>{tuck}</b>||( x y -- y x y )||||
-{{{ }}}
+
 =7 Sample macros=
 
  ...coming soon...
