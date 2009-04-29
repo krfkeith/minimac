@@ -442,7 +442,7 @@
 
  {.s} ( -- )
 
-==5.9 (...not yet sorted, more to come...)==
+==5.9 (...not yet sorted...)==
 
 ==={.} - print===
 
@@ -466,7 +466,11 @@
 
  {!} ( value name -- )
 
- implemented...
+==={divert} - output diversion===
+
+ {divert} ( filename -- )
+
+ Temporarily diverts the output stream to a file. Overwrites the file if it already exists.
 
 ==={include} - file inclusion===
 
@@ -479,6 +483,22 @@
  {last} ( -- name )
 
  Returns the name of the most recent user-defined macro.
+
+==={remove} - file deletion===
+
+ {remove} ( filename -- )
+
+==={undivert} - cease current output diversion===
+
+ {undivert} ( -- )
+
+ Ceases the most recent output diversion started by {divert}.
+
+==={verbatim} - file inclusion (without expansion)===
+
+ {verbatim} ( filename -- )
+
+ Causes the file named to be read and sent directly to the output stream without expansion.
 
 =6 Extensions=
 
