@@ -354,7 +354,6 @@
 ||<b>{>}</b>||( n1 n2 -- -1|0 )||greater-than||
 ||<b>{>=}</b>||( n1 n2 -- -1|0 )||greater-than or-equal||
 
-
 ==5.3 Stack manipulations==
 
 ||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
@@ -366,7 +365,6 @@
 
 ||<b>{pop}</b>||( -- x ) aux:( x -- )||pop from auxiliary stack||
 ||<b>{push}</b>||( x -- ) aux:( -- x )||push to auxiliary stack||
-
 
 ==5.5 Control-flow==
 
@@ -492,7 +490,6 @@
 ||<b>{empty?}</b>||( name -- -1|0)||test if macro is empty||
 ||<b>{rot}</b>||( x y z -- y z x )||||
 ||<b>{tuck}</b>||( x y -- y x y )||||
-
 
 =7 Sample macros=
 
