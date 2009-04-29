@@ -59,6 +59,7 @@
 <tt><b>
  ```foo```Hello World!```<br/>
  =><br/>
+ <br/>
  foo<br/>
  =>Hello World!<br/>
 </b></tt>
@@ -77,8 +78,10 @@
 <tt><b>
  ```foo```Hello```<br/>
  =><br/>
+ <br/>
  FOO<br/>
  =>FOO<br/>
+ <br/>
  foo<br/>
  =>Hello<br/>
 </b></tt>
@@ -88,8 +91,10 @@
 <tt><b>
  ```1st```my first macro```<br/>
  =><br/>
+ <br/>
  ```2nd```another macro```<br/>
  =><br/>
+ <br/>
  {.m}<br/>
  =>-------`<br/>
  =>Macros (2):<br/>
@@ -105,10 +110,12 @@
 <tt><b>
  ```foo```Hello```<br/>
  =><br/>
+ <br/>
  foo<br/>
  =>Hello<br/>
  ```foo```Goodbye```<br/>
  =><br/>
+ <br/>
  foo<br/>
  =>Goodbye<br/>
 </b></tt>
@@ -120,12 +127,16 @@
 <tt><b>
  ```friend```George```<br/>
  =><br/>
+ <br/>
  ```greet```Hello friend```<br/>
  =><br/>
+ <br/>
  greet<br/>
  =>Hello George<br/>
+ <br/>
  ```friend```Ann```<br/>
  =><br/>
+ <br/>
  greet<br/>
  =>Hello Ann<br/>
 </b></tt>
@@ -137,10 +148,13 @@
 <tt><b>
  ```greet```hello```<br/>
  =><br/>
+ <br/>
  greet<br/>
  =>hello<br/>
+ <br/>
  ```greet```Well ^ there!```<br/>
  =><br/>
+ <br/>
  greet<br/>
  => Well hello there!<br/>
 </b></tt>
@@ -152,10 +166,13 @@
 <tt><b>
  ```what```car```<br/>
  =><br/>
+ <br/>
  ```who```George```<br/>
  =><br/>
+ <br/>
  ```thing```who$'s what```<br/>
  =><br/>
+ <br/>
  thing<br/>
  =>George's car<br/>
 </b></tt>
@@ -167,12 +184,16 @@
 <tt><b>
  ```test```bcd```<br/>
  =><br/>
+ <br/>
  ```embedded```a$test$e```<br/>
  =><br/>
+ <br/>
  embedded<br/>
  =>abcde<br/>
+ <br/>
  ```escaped```a\$test\$e```<br/>
  =><br/>
+ <br/>
  escaped<br/>
  =>a$test$e<br/>
 </b></tt>
@@ -212,6 +233,7 @@
 <tt><b> 
  5&<br/>
  =><br/>
+ <br/>
  {.s}<br/>
  =><br/>
  =>-------<br/>
@@ -225,8 +247,10 @@
 <tt><b>
  ```foo```just a test```<br/>
  =><br/>
+ <br/>
  foo&<br/>
  =><br/>
+ <br/>
  {.s}<br/>
  =><br/>
  =>-------<br/>
@@ -241,14 +265,17 @@
 <tt><b> 
  {?}<br/>
  =>this is a test<br/>
+ <br/>
  {.s}<br/>
  =><br/>
  =>-------<br/>
  =>Items on the stack (1):<br/>
  `=>stack[0] => [5]`<br/>
  =>-------<br/>
+ <br/>
  {?}<br/>
  =>5<br/>
+ <br/>
  {.s}<br/>
  =>-------<br/>
  =>Items on the stack (0):<br/>
@@ -288,6 +315,7 @@
  `=>stack[1] => [3]`<br/>
  `=>stack[0] => [5]`<br/>
  =>-------<br/>
+ <br/>
  {+} {.s}<br/>
  =><br/>
  =>-------<br/>
@@ -365,8 +393,9 @@
  Example:
 
 <tt><b>
- ```stars```[ {if} {--} * {repeat} ]```<br/>
+ ```stars```[ {if} {--} `*` {repeat} ]```<br/>
  =><br/>
+ <br/>
  3& stars<br/>
  =>`***`<br/>
 </b></tt>
