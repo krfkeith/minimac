@@ -365,7 +365,7 @@
  Example:
 
 <tt><b>
- ```stars```[ {if} {--} `*` {repeat} ]```<br/>
+ ```stars```[ {if} {--} * {repeat} ]```<br/>
  =><br/>
  3& stars<br/>
  =>`***`<br/>
