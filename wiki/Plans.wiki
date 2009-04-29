@@ -1,4 +1,4 @@
-#List of enhancements being considered
+#summary List of enhancements being considered
 
 ||<b>enhancement</b>||<b>status</b>||<b>notes</b>||
 ||output diversions||planned||||
