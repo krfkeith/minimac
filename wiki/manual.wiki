@@ -297,9 +297,9 @@
 
 =5 Catalog of built-ins=
 
-==5.1 Arithmetic==
+==5.1 Integer Arithmetic==
 
-||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
+||<b>operator</b>||<b>stack effect</b>||<b>description</b>||
 ||<b>{+}</b>||( n1 n2 -- n1+n2 )||add||
 ||<b>{-}</b>||( n1 n2 -- n1-n2 )||subtract||
 ||<b>{`*`}</b>||( n1 n2 -- n1*n2 )||multiply||
@@ -356,7 +356,7 @@
 
 ==5.3 Stack manipulations==
 
-||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
+||<b>operator</b>||<b>stack effect</b>||<b>description</b>||
 ||<b>{drop}</b>||( x -- )||drop top of stack||
 ||<b>{dup}</b>||( x -- x x )||duplicate top of stack||
 ||<b>{over}</b>||( x1 x2 -- x1 x2 x1 )||duplicate next of stack||
@@ -423,7 +423,7 @@
 
 ==5.7 Bitwise==
 
-||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
+||<b>operator</b>||<b>stack effect</b>||<b>description</b>||
 ||<b>{~}</b>||( n -- ~n )||bitwise not||
 ||<b>{&}</b>||( n1 n2 -- n1&n2 )||bitwise and||
 ||<b>{`|`}</b>||( n1 n2 -- n1`|`n2 )||bitwise or||
@@ -484,6 +484,7 @@
 
  Extension macros are supplied in the '*extend.mm*' file.
 
+||<b>macro</b>||<b>stack effect</b>||<b>description</b>||
 ||<b>{>>aux}</b>||( x -- x ) aux:( -- x )||copy to auxiliary stack||
 ||<b>{aux>>}</b>||( -- x ) aux:( x -- x )||copy from auxiliary stack||
 ||<b>{2dup}</b>||( x y -- x y x y )||duplicate to two stack item||
