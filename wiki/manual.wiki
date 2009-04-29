@@ -297,7 +297,7 @@
 
 =5 Catalog of built-ins=
 
-==5.1 Integer Arithmetic==
+==5.1 Integer arithmetic==
 
 ||<b>operator</b>||<b>stack effect</b>||<b>description</b>||
 ||<b>{+}</b>||( n1 n2 -- n1+n2 )||add||
