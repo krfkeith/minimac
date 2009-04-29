@@ -348,24 +348,24 @@
 ==5.2 Comparison==
 
 ||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
-||{=}||( n1 n2 -- -1|0 )||equal||
-||{<}||( n1 n2 -- -1|0 )||less-than||
-||{<=}||( n1 n2 -- -1|0 )||less-than or-equal||
-||{>}||( n1 n2 -- -1|0 )||greater-than||
-||{>=}||( n1 n2 -- -1|0 )||greater-than or-equal||
+||<b>{=}</b>||( n1 n2 -- -1|0 )||equal||
+||<b>{<}</b>||( n1 n2 -- -1|0 )||less-than||
+||<b>{<=}</b>||( n1 n2 -- -1|0 )||less-than or-equal||
+||<b>{>}</b>||( n1 n2 -- -1|0 )||greater-than||
+||<b>{>=}</b>||( n1 n2 -- -1|0 )||greater-than or-equal||
 
 
 ==5.3 Stack manipulations==
 
 ||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
-||{drop}||( x -- )||drop top of stack||
-||{dup}||( x -- x x )||duplicate top of stack||
-||{over}||( x1 x2 -- x1 x2 x1 )||duplicate next of stack||
+||<b>{drop}</b>||( x -- )||drop top of stack||
+||<b>{dup}</b>||( x -- x x )||duplicate top of stack||
+||<b>{over}</b>||( x1 x2 -- x1 x2 x1 )||duplicate next of stack||
 
 ==5.4 Auxiliary stack==
 
-||{pop}||( -- x ) aux:( x -- )||pop from auxiliary stack||
-||{push}||( x -- ) aux:( -- x )||push to auxiliary stack||
+||<b>{pop}</b>||( -- x ) aux:( x -- )||pop from auxiliary stack||
+||<b>{push}</b>||( x -- ) aux:( -- x )||push to auxiliary stack||
 
 
 ==5.5 Control-flow==
@@ -426,9 +426,9 @@
 ==5.7 Bitwise==
 
 ||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
-||{~}||( n -- ~n )||bitwise not||
-||{&}||( n1 n2 -- n1&n2 )||bitwise and||
-||{`|`}||( n1 n2 -- n1`|`n2 )||bitwise or||
+||<b>{~}</b>||( n -- ~n )||bitwise not||
+||<b>{&}</b>||( n1 n2 -- n1&n2 )||bitwise and||
+||<b>{`|`}</b>||( n1 n2 -- n1`|`n2 )||bitwise or||
 
 ==5.8 Diagnostic utilities==
 
@@ -486,10 +486,10 @@
 
  Extension macros are supplied in the '*extend.mm*' file.
 
-||{>>aux}||( x -- x ) aux:( -- x )||copy to auxiliary stack||
-||{aux>>}||( -- x ) aux:( x -- x )||copy from auxiliary stack||
-||{2dup}||( x y -- x y x y )||duplicate to two stack item||
-||{tuck}||( x y -- y x y )||
+||<b>{>>aux}</b>||( x -- x ) aux:( -- x )||copy to auxiliary stack||
+||<b>{aux>>}</b>||( -- x ) aux:( x -- x )||copy from auxiliary stack||
+||<b>{2dup}</b>||( x y -- x y x y )||duplicate to two stack item||
+||<b>{tuck}</b>||( x y -- y x y )||
 
 =7 Sample macros=
 
@@ -503,14 +503,18 @@
 
 ==Special characters:==
 
-||`||define||
-||$||embed||
-||\||escape||
-||&||push||
-||^||self-reference||
-||"||quote||
+||<b>`</b>||define||
+||<b>$</b>||embed||
+||<b>\</b>||escape||
+||<b>&</b>||push||
+||<b>^</b>||self-reference||
+||<b>"</b>||quote||
 
 ==Buit-ins:==
+
+...unfinished see rest of manual...
+
+==Extensions:==
 
 ...unfinished see rest of manual...
 
