@@ -1,0 +1,7 @@
+#List of enhancements being considered
+
+||<b>enhancement</b>||<b>status</b>||<b>notes</b>||
+||output diversions||planned||||
+||single-line comments||planned||||
+||multi-line comments||under consideration||||
+||user-configurable special characters||under consideration||||
