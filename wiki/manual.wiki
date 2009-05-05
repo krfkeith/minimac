@@ -509,9 +509,15 @@
 ||<b>macro</b>||<b>stack effect</b>||<b>description</b>||
 ||<b>{>>aux}</b>||( x -- x ) aux:( -- x )||copy to auxiliary stack||
 ||<b>{aux>>}</b>||( -- x ) aux:( x -- x )||copy from auxiliary stack||
+||<b>{2drop}</b>||( x y -- )||discard top two stack items||
 ||<b>{2dup}</b>||( x y -- x y x y )||duplicate to two stack item||
 ||<b>{empty?}</b>||( name -- -1|0)||test if macro is empty||
+||<b>{lift}</b>||( x y -- x x y )||duplicate next of stack||
+||<b>{max}</b>||( n1 n2 -- n )||maximum||
+||<b>{min}</b>||( n1 n2 -- n )||minimum||
+||<b>{nip}</b>||( x y -- y )||discard next of stack||
 ||<b>{rot}</b>||( x y z -- y z x )||||
+||<b>{-rot}</b>||( x y z -- z x y )||||
 ||<b>{tuck}</b>||( x y -- y x y )||||
 
 =7 Sample macros=
