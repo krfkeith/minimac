@@ -1,0 +1,135 @@
+#summary minimac usage examples - 1st draft
+
+<font size="5" color="green">minimac - usage examples</font><br/>
+
+<wiki:toc max_depth="3" />
+
+=1 Introduction=
+
+ The purpose of this guide is to help you get a feel for writing macros with minimac. The examples are contrasted with other open source macro processors to help you explore which language might be best suited to your specific needs. The different macro processors each have their inherent advantages and disadvantages which may or may not be relevant to your application.
+
+ _Note: the initial examples are likely to be overly contrived, I hope to eventually replace them with ones that better illustrate the salient features of each tool._
+
+ The minimac examples are usually given in three contrasting versions:
+ 
+  * a version that uses variables to the exclusion of the minimac's explicit stack
+  * a version that mixes variable and stack usage
+  * a version that emphasizes usage of minimac's the explicit stack 
+ 
+ Minimac macros that affect the explicit stack have stack comments of the form: '( before -- after )'.
+ 
+ The open source macro languages used for comparison are:
+ 
+  * Gnu m4 http://www.gnu.org/software/m4/
+  * ML/1 http://www.ml1.org.uk/
+  * Gema http://gema.sourceforge.net/new/index.shtml
+  * gpp http://en.nothingisreal.com/wiki/GPP
+ 
+=2 examples=
+
+==2.1 simple text replacement and counter==
+
+  This example uses the generation of HTML headers to illustrate simple text replacement and how to implement a counter.
+
+===2.1.1 reference===
+ 
+ http://en.wikipedia.org/wiki/M4_(computer_language)
+ 
+===2.1.2 m4 version===
+
+<tt>
+ define(```H2_COUNT', 0)dnl<br/>
+ =><br/>
+ <br/>
+ define(```H2', ```define(```H2_COUNT', incr(H2_COUNT))'dnl<br/>
+ ```{{{<h2>}}}H2_COUNT. $1{{{</h2>}}}')dnl<br/>
+ =><br/>
+ <br/>
+ H2(First Section)<br/>
+ =>{{{<h2>1. First Section</h2>}}}<br/>
+ <br/>
+ H2(Second Section)<br/>
+ =>{{{<h2>2. Second Section</h2>}}}<br/>
+ <br/>
+ H2(Conclusion)<br/>
+ =>{{{<h2>3. Conclusion</h2>}}}<br/>
+</tt>
+
+===2.1.3 minimac versions===
+
+====2.1.3.1 variables-oriented version====
+
+<tt>
+ ```H2_COUNT```0```<br/>
+ =><br/>
+ <br/>
+ ```H2_TEXT```{{{<h2>}}}$H2_COUNT$. CONTENT${{{</h2>}}}```<br/>
+ =><br/>
+ <br/>
+ ```H2```H2_COUNT& {++}$H2_TEXT```<br/>
+ =><br/>
+ <br/>
+ ```CONTENT```First Section``` H2<br/>
+ =>{{{<h2>1. First Section</h2>}}}<br/>
+ <br/>
+ ```CONTENT```Second Section``` H2<br/>
+ =>{{{<h2>1. First Section</h2>}}}<br/>
+ <br/>
+ ```CONTENT```Conclusion``` H2<br/>
+ =>{{{<h2>1. Conclusion</h2>}}}<br/>
+</tt>
+
+====2.1.3.2 hybrid version====
+
+<tt>
+ ```H2_TEXT```{{{<h2>}}}$H2_COUNT$. {?}${{{</h2>}}}```<br/>
+ =><br/>
+ <br/>
+ ```H2_COUNT```0```<br/>
+ =><br/>
+ <br/>
+ ```H2 ( title -- ) ```H2_COUNT& {++}$H2_TEXT```<br/>
+ =><br/>
+ <br/>
+ First\ Section& H2<br/>
+ =>{{{<h2>1. First Section</h2>}}}<br/>
+ <br/>
+ Second\ Section& H2<br/>
+ =>{{{<h2>2. Second Section</h2>}}}<br/>
+ <br/>
+ Conclusion& H2<br/>
+ =>{{{<h2>3. Conclusion</h2>}}}<br/>
+</tt> 
+
+====2.1.3.3 stack-oriented version====
+
+<tt>
+ ```H2 ( count title -- count+1 ) ```{{{<h2>}}}${over}${?}$. {?}${++}${{{</h2>}}}```<br/>
+ <br/>
+ {{{1&}}} First\ Section& H2<br/>
+ =>{{{<h2>1. First Section</h2>}}}<br/>
+ <br/>
+ Second\ Section& H2<br/>
+ =>{{{<h2>2. Second Section</h2>}}}<br/>
+ <br/>
+ Conclusion& H2<br/>
+ =>{{{<h2>3. Conclusion</h2>}}}<br/>
+</tt> 
+
+==...more examples to come...==
+
+=Appendix A - BSD Documentation License=
+
+Redistribution and use in source (text) and 'compiled' forms (SGML, HTML, PDF, PostScript, RTF and so forth) with or without modification, are permitted provided that the following conditions are met:
+
+  # Redistributions of source code (text) must retain the above copyright notice, this list of conditions and the following disclaimer as the first lines of this file unmodified.
+  # Redistributions in compiled form (transformed to other DTDs, converted to PDF, PostScript, RTF and other formats) must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS DOCUMENTATION IS PROVIDED BY THE COPYRIGHT HOLDER "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+This notice shall appear on any product containing this material.
+
+----
+*minimac - a minimalist macro processor*
+
+_Copyright (c) 2009 Mark W. Humphries. All rights reserved._
