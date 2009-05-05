@@ -522,7 +522,7 @@
 
 =7 Sample macros=
 
- ...coming soon...
+ see: http://code.google.com/p/minimac/wiki/examples
 
 =8 Quirks and limitations=
 
