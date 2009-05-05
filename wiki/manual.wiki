@@ -425,9 +425,10 @@
 ==5.7 Bitwise==
 
 ||<b>operator</b>||<b>stack effect</b>||<b>description</b>||
-||<b>{~}</b>||( n -- ~n )||bitwise not||
-||<b>{&}</b>||( n1 n2 -- n1&n2 )||bitwise and||
-||<b>{`|`}</b>||( n1 n2 -- n1`|`n2 )||bitwise or||
+||<b>{and}</b>||( n1 n2 -- n1&n2 )||bitwise and||
+||<b>{not}</b>||( n -- ~n )||bitwise not||
+||<b>{or}</b>||( n1 n2 -- n1`|`n2 )||bitwise or||
+||<b>{xor}</b>||( n1 n2 -- n1`|`n2 )||bitwise xor||
 
 ==5.8 Diagnostic utilities==
 
