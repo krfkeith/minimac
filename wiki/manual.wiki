@@ -360,6 +360,7 @@
 ||<b>{drop}</b>||( x -- )||drop top of stack||
 ||<b>{dup}</b>||( x -- x x )||duplicate top of stack||
 ||<b>{over}</b>||( x1 x2 -- x1 x2 x1 )||duplicate next of stack||
+||<b>{swap}</b>||( x1 x2 -- x2 x1 )||swap the top two items of the stack||
 
 ==5.4 Auxiliary stack==
 
