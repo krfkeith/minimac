@@ -378,7 +378,7 @@
 
  {if} ( x -- x| )
 
- Expands the rest of the definition only if the integer value of x is not zero. Conversely if x is not zero, x is dropped from the stack, and the remainder of the enclosing definition is no longer expanded.
+ Expands the rest of the definition only if the integer value of x is not zero. Conversely if x is zero, x is dropped from the stack, and the remainder of the enclosing definition is no longer expanded.
 
  Example:
  ...coming soon...
