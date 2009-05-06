@@ -369,11 +369,20 @@
 
 ==5.5 Control-flow==
 
-==={continue} - conditional execution===
+==={continue} - conditional expansion===
 
  {continue} ( x -- x| )
 
  Expands the rest of the definition only if the integer value of x is not zero. Conversely if x is zero, x is dropped from the stack, and the remainder of the enclosing definition is no longer expanded.
+
+ Example:
+ ...coming soon...
+
+==={execute} - unconditional execution===
+
+ {execute} ( name -- )
+
+ Expands the macro or built-in whose name is on the top of the stack.
 
  Example:
  ...coming soon...
@@ -383,6 +392,24 @@
  {exit} ( n -- ) or {exit} ( -- )
 
  Exits to the OS using the top of stack as the exit code. If the stack is empty when {exit} is invoked a default exit code of 0 is used. 
+
+==={if} - conditional execution===
+
+ {if} ( n name -- )
+
+ Expands the macro or built-in whose name is on the top of the stack if n is non-zero.
+
+ Example:
+ ...coming soon...
+
+==={ifelse} - if-else conditional execution===
+
+ {ifelse} ( n if-name else-name -- )
+
+ Expands the macro or built-in 'if-name' if n is non-zero, otherwise executes the macro or built-in 'else-name'.
+
+ Example:
+ ...coming soon...
 
 ==={repeat} - looping===
 
