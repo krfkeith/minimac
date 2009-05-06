@@ -347,6 +347,8 @@
 
 ==5.2 Comparison==
 
+ All comparison operators return canonical truth values, -1 for true, 0 for false.
+
 ||<b>operator</b>||<b>stack effect</b>||||<b>description</b>||
 ||<b>{=}</b>||( n1 n2 -- -1|0 )||equal||
 ||<b>{<}</b>||( n1 n2 -- -1|0 )||less-than||
@@ -354,20 +356,21 @@
 ||<b>{>}</b>||( n1 n2 -- -1|0 )||greater-than||
 ||<b>{>=}</b>||( n1 n2 -- -1|0 )||greater-than or-equal||
 
-==5.3 Stack manipulations==
+==5.3 Variables==
 
-||<b>operator</b>||<b>stack effect</b>||<b>description</b>||
-||<b>{drop}</b>||( x -- )||drop top of stack||
-||<b>{dup}</b>||( x -- x x )||duplicate top of stack||
-||<b>{over}</b>||( x1 x2 -- x1 x2 x1 )||duplicate next of stack||
-||<b>{swap}</b>||( x1 x2 -- x2 x1 )||swap the top two items of the stack||
+==={@} - fetch===
 
-==5.4 Auxiliary stack==
+ {@} ( name -- value )
 
-||<b>{pop}</b>||( -- x ) aux:( x -- )||pop from auxiliary stack||
-||<b>{push}</b>||( x -- ) aux:( -- x )||push to auxiliary stack||
+  Fetch the value of a macro variable.
 
-==5.5 Control-flow==
+==={!} - store===
+
+ {!} ( value name -- )
+
+ Store a value into a macro variable.
+ 
+==5.4 Control flow==
 
 ==={continue} - conditional expansion===
 
@@ -459,7 +462,58 @@
  =>`***`<br/>
 </b></tt>
 
-==5.6 Strings==
+==5.5 Input and Output==
+
+==={.} - print===
+
+ {.} ( str -- )
+
+ Print the top of stack without expansion.
+
+==={?} - expand===
+
+ {?} ( token -- )
+
+ Expand the top of stack. 
+
+==={divert} - output diversion===
+
+ {divert} ( filename -- )
+
+ Temporarily diverts the output stream to a file. Overwrites the file if it already exists.
+
+==={include} - file inclusion===
+
+ {include} ( filename -- )
+
+ Causes the file named to be read and expanded.
+
+==={undivert} - cease current output diversion===
+
+ {undivert} ( -- )
+
+ Ceases the most recent output diversion started by {divert}.
+
+==={verbatim} - file inclusion (without expansion)===
+
+ {verbatim} ( filename -- )
+
+ Causes the file named to be read and sent directly to the output stream without expansion.
+
+==5.6 Parameter Stack==
+
+||<b>operator</b>||<b>stack effect</b>||<b>description</b>||
+||<b>{drop}</b>||( x -- )||drop top of stack||
+||<b>{dup}</b>||( x -- x x )||duplicate top of stack||
+||<b>{over}</b>||( x1 x2 -- x1 x2 x1 )||duplicate next of stack||
+||<b>{swap}</b>||( x1 x2 -- x2 x1 )||swap the top two items of the stack||
+
+==5.7 Auxiliary stack==
+
+||<b>{pop}</b>||( -- x ) aux:( x -- )||pop from auxiliary stack||
+||<b>{push}</b>||( x -- ) aux:( -- x )||push to auxiliary stack||
+
+==5.8 Strings==
 
 ==={append} - append to a string variable===
 
@@ -481,7 +535,9 @@
 
  {substr} ( str start length -- str' )
 
-==5.7 Bitwise==
+==5.9 Bitwise==
+ 
+ If provided with canonical truth values, i.e. -1 for true and 0 for false, the bitwise operators can also serve as logical operators.
 
 ||<b>operator</b>||<b>stack effect</b>||<b>description</b>||
 ||<b>{and}</b>||( n1 n2 -- n1&n2 )||bitwise and||
@@ -489,7 +545,7 @@
 ||<b>{or}</b>||( n1 n2 -- n1`|`n2 )||bitwise or||
 ||<b>{xor}</b>||( n1 n2 -- n1`|`n2 )||bitwise xor||
 
-==5.8 Diagnostic utilities==
+==5.10 Diagnostic utilities==
 
 ==={.a} - display auxiliary stack contents===
 
@@ -503,41 +559,7 @@
 
  {.s} ( -- )
 
-==5.9 (...not yet sorted...)==
-
-==={.} - print===
-
- {.} ( str -- )
-
- Print the top of stack without expansion.
-
-==={?} - expand===
-
- {?} ( token -- )
-
- Expand the top of stack. 
-
-==={@} - fetch===
-
- {@} ( name -- value )
-
- implemented...
-
-==={!} - store===
-
- {!} ( value name -- )
-
-==={divert} - output diversion===
-
- {divert} ( filename -- )
-
- Temporarily diverts the output stream to a file. Overwrites the file if it already exists.
-
-==={include} - file inclusion===
-
- {include} ( filename -- )
-
- Causes the file named to be read and expanded.
+==5.11 Miscellaneous==
 
 ==={last} - last dictionary definition===
 
@@ -548,18 +570,6 @@
 ==={remove} - file deletion===
 
  {remove} ( filename -- )
-
-==={undivert} - cease current output diversion===
-
- {undivert} ( -- )
-
- Ceases the most recent output diversion started by {divert}.
-
-==={verbatim} - file inclusion (without expansion)===
-
- {verbatim} ( filename -- )
-
- Causes the file named to be read and sent directly to the output stream without expansion.
 
 =6 Extensions=
 
@@ -585,7 +595,8 @@
 
 =8 Quirks and limitations=
 
- unfinished...
+  * assumes two's complement arithmetic
+  * names are limited to 64 characters
 
 =Appendix A - <b>minimac</b> Quick Reference=
 
