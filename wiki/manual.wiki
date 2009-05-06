@@ -375,17 +375,22 @@
 
  Expands the rest of the definition only if the integer value of x is not zero. Conversely if x is zero, x is dropped from the stack, and the remainder of the enclosing definition is no longer expanded.
 
- Example:
- ...coming soon...
+ Example: See {repeat}
 
 ==={execute} - unconditional execution===
 
  {execute} ( name -- )
 
- Expands the macro or built-in whose name is on the top of the stack.
+ Expands the macro whose name is on the top of the stack.
 
  Example:
- ...coming soon...
+<tt><b>
+ ```HI```Hello!```<br/>
+ =><br/>
+ <br/>
+ HI& {execute}<br/>
+ =>Hello!<br/>
+</b></tt>
 
 ==={exit} - exiting to the OS===
 
@@ -397,19 +402,46 @@
 
  {if} ( n name -- )
 
- Expands the macro or built-in whose name is on the top of the stack if n is non-zero.
+ Expands the macro whose name is on the top of the stack if n is non-zero.
 
  Example:
- ...coming soon...
+<tt><b>
+ ```HI```Hello!```<br/>
+ =><br/>
+ <br/>
+ ```?HI```HI& {if}```<br/>
+ =><br/>
+ <br/>
+ 1& ?HI<br/>
+ =>Hello!<br/>
+ <br/>
+ 0& ?HI<br/>
+ =><br/>
+</b></tt>
 
 ==={ifelse} - if-else conditional execution===
 
  {ifelse} ( n if-name else-name -- )
 
- Expands the macro or built-in 'if-name' if n is non-zero, otherwise executes the macro or built-in 'else-name'.
+ Expands the macro 'if-name' if n is non-zero, otherwise executes the macro or built-in 'else-name'.
 
  Example:
- ...coming soon...
+<tt><b>
+ ```HI```Hello!```<br/>
+ =><br/>
+ <br/>
+ ```BYE```Goodbye!```<br/>
+ =><br/>
+ <br/>
+ ```GREET```HI& BYE& {ifelse}```<br/>
+ =><br/>
+ <br/>
+ 1& GREET<br/>
+ =>Hello!<br/>
+ <br/>
+ 0& GREET<br/>
+ =>Goodbye!<br/>
+</b></tt>
 
 ==={repeat} - looping===
 
@@ -579,10 +611,10 @@
 
 =Appendix B - BSD Documentation License=
 
-Redistribution and use in source (text) and 'compiled' forms (SGML, HTML, PDF, PostScript, RTF and so forth) with or without modification, are permitted provided that the following conditions are met:
+Redistribution and use in source (text) and 'compiled' forms (SGML, HTML, PDF, !PostScript, RTF and so forth) with or without modification, are permitted provided that the following conditions are met:
 
   # Redistributions of source code (text) must retain the above copyright notice, this list of conditions and the following disclaimer as the first lines of this file unmodified.
-  # Redistributions in compiled form (transformed to other DTDs, converted to PDF, PostScript, RTF and other formats) must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  # Redistributions in compiled form (transformed to DTDs, converted to PDF, !PostScript, RTF and other formats) must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 
 THIS DOCUMENTATION IS PROVIDED BY THE COPYRIGHT HOLDER "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
