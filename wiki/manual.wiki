@@ -207,7 +207,7 @@
 
 ==3.8 Quoting==
 
- A string surrounded by the double-quote '*"*' is output as a literal string (i.e. without expansion).
+ A string surrounded by the tilde character '*~*' is output as a literal string (i.e. without expansion).
 
 =4 Built-in functions=
 
@@ -607,7 +607,7 @@
 ||<b>\</b>||escape||
 ||<b>&</b>||push||
 ||<b>^</b>||self-reference||
-||<b>"</b>||quote||
+||<b>~</b>||quote||
 
 ==Buit-ins:==
 
