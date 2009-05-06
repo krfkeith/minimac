@@ -369,20 +369,20 @@
 
 ==5.5 Control-flow==
 
-==={exit} - exiting to the OS===
+==={continue} - conditional execution===
 
- {exit} ( n -- ) or {exit} ( -- )
-
- Exits to the OS using the top of stack as the exit code. If the stack is empty when {exit} is invoked a default exit code of 0 is used. 
-
-==={if} - conditional execution===
-
- {if} ( x -- x| )
+ {continue} ( x -- x| )
 
  Expands the rest of the definition only if the integer value of x is not zero. Conversely if x is zero, x is dropped from the stack, and the remainder of the enclosing definition is no longer expanded.
 
  Example:
  ...coming soon...
+
+==={exit} - exiting to the OS===
+
+ {exit} ( n -- ) or {exit} ( -- )
+
+ Exits to the OS using the top of stack as the exit code. If the stack is empty when {exit} is invoked a default exit code of 0 is used. 
 
 ==={repeat} - looping===
 
@@ -393,7 +393,7 @@
  Example:
 
 <tt><b>
- ```stars```{{{[}}} {if} {--} {{{*}}} {repeat} {{{]}}}```<br/>
+ ```stars```{{{[}}} {continue} {--} {{{*}}} {repeat} {{{]}}}```<br/>
  =><br/>
  <br/>
  3& stars<br/>
