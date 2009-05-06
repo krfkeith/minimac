@@ -412,7 +412,7 @@
  ```?HI```HI& {if}```<br/>
  =><br/>
  <br/>
- 1{{{&}}} ?HI<br/>
+ -1& ?HI<br/>
  =>Hello!<br/>
  <br/>
  0& ?HI<br/>
@@ -436,7 +436,7 @@
  ```GREET```HI& BYE& {ifelse}```<br/>
  =><br/>
  <br/>
- 1{{{&}}} GREET<br/>
+ -1& GREET<br/>
  =>Hello!<br/>
  <br/>
  0& GREET<br/>
