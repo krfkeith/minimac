@@ -146,7 +146,7 @@
 
 ==3.4 Self-referential macros==
 
- The caret '*^*' character in the body of a macro expands to the latest definition of the same name as the macro which contains it. The *{self!}* built-in can be used to change the reserved character from the default of '*^*'.
+ The caret *`^`* character in the body of a macro expands to the latest definition of the same name as the macro which contains it. The *{self!}* built-in can be used to change the reserved character from the default of '*`^`*'.
 
 <tt><b>
  ```greet```hello```<br/>
