@@ -103,6 +103,8 @@
  =>-------<br/>
 </b></tt>
 
+ The {toggle!} built-in can be used to change the reserved character from the default of '*`*' to another character.
+
 ==3.2 Redefining a macro==
 
  A new definition of a macro replaces the previous definition from that point onwards.
@@ -144,7 +146,7 @@
 
 ==3.4 Self-referential macros==
 
- The caret '*^*' character in the body of a macro expands to the latest definition of the same name as the macro which contains it.
+ The caret '*^*' character in the body of a macro expands to the latest definition of the same name as the macro which contains it. The {self!} built-in can be used to change the reserved character from the default of '*^*'.
 
 <tt><b>
  ```greet```hello```<br/>
@@ -178,6 +180,8 @@
  =>George's car<br/>
 </b></tt>
 
+ The {embed!} built-in can be used to change the reserved character from the default of '*$*' to another character.
+
 ==3.6 Escaping==
 
  The backslash '*\*' character is used as an escape character, i.e. the character immediately following the backslash is interpreted literally.
@@ -199,15 +203,21 @@
  =>a$test$e<br/>
 </b></tt>
 
+ The {escape!} built-in can be used to change the reserved character from the default of '*\*' to another character.
+
 {{{ [...STD should we use a character other than '\' as the escape character?...] }}}
 
 ==3.7 Ignoring whitespace within a definition==
 
  The left-bracket '*`[`*'  character within a definition causes runs of whitespace to be replaced by runs of the dollar '*$*' character. The right-bracket '*`]`*' resumes normal whitespace expansion.
 
+ The {wsoff!} and {wson!} built-ins can be used to change the reserved characters from their defaults of '*`[`*' and '*`]`*' to other characters.
+
 ==3.8 Quoting==
 
- A string surrounded by the tilde character '*~*' is output as a literal string (i.e. without expansion).
+ A string surrounded by the tilde character '*~*' is output as a literal string (i.e. without expansion).  
+
+ The {quote!} built-in can be used to change the reserved character from the default of '*~*' to another character.
 
 =4 Built-in functions=
 
