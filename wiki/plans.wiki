@@ -11,4 +11,4 @@
 ||8||date & time handling||under consideration||||
 ||9||random number generation||under consideration||||
 ||10||debugging & diagnostic tools||planned||||
-||11||discontinue using [] as special chars||planned||||
+||11||discontinue using brackets as special chars||planned||||
