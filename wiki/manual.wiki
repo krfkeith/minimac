@@ -572,7 +572,7 @@
 ||<b>{push!}</b>||( c --)||store <i>literal push</i> character||
 ||<b>{quote@}</b>||(-- c)||fetch <i>quote</i> character||
 ||<b>{quote!}</b>||( c --)||store <i>quote</i> character||
-||<b>{self@}</b>||(-- c)||fetch  <i>self-reference</i> character
+||<b>{self@}</b>||(-- c)||fetch  <i>self-reference</i> character||
 ||<b>{self!}</b>||( c --)||store s<i>elf-reference</i> character||
 ||<b>{toggle@}</b>||(-- c)||fetch <i>define toggle</i> character||
 ||<b>{toggle!}</b>||( c --)||store <i>define toggle</i> character|| 
