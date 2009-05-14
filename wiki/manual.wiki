@@ -559,7 +559,7 @@
 
  {.s} ( -- )
 
-==5.10 Special characters==
+==5.11 Reserved Special characters==
  
  Operators that for checking and changing minimac's reserved special characters. 
 
@@ -577,7 +577,7 @@
 ||<b>{toggle@}</b>||(-- c)||fetch <i>define toggle</i> character||
 ||<b>{toggle!}</b>||( c --)||store <i>define toggle</i> character|| 
 
-==5.11 Miscellaneous==
+==5.12 Miscellaneous==
 
 ==={last} - last dictionary definition===
 
