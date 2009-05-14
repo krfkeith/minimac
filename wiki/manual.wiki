@@ -559,6 +559,24 @@
 
  {.s} ( -- )
 
+==5.10 Special characters==
+ 
+ Operators that for checking and changing minimac's reserved special characters. 
+
+||<b>operator</b>||<b>stack effect</b>||<b>description</b>||
+||<b>{embed@}</b>||(-- c)||fetch <i>embed</i> character||
+||<b>{embed!}</b>||( c --)||store <i>embed</i> character||
+||<b>{escape@}</b>||(-- c)||fetch <i>escape</i> character||
+||<b>{escape!}</b>||( c --)||store <i>escape</i> character||
+||<b>{push@}</b>||(-- c)||fetch <i>literal push</i> character||
+||<b>{push!}</b>||( c --)||store <i>literal push</i> character||
+||<b>{quote@}</b>||(-- c)||fetch <i>quote</i> character||
+||<b>{quote!}</b>||( c --)||store <i>quote</i> character||
+||<b>{self@}</b>||(-- c)||fetch  <i>self-reference</i> character
+||<b>{self!}</b>||( c --)||store s<i>elf-reference</i> character||
+||<b>{toggle@}</b>||(-- c)||fetch <i>define toggle</i> character||
+||<b>{toggle!}</b>||( c --)||store <i>define toggle</i> character|| 
+
 ==5.11 Miscellaneous==
 
 ==={last} - last dictionary definition===
@@ -602,12 +620,13 @@
 
 ==Special characters:==
 
-||<b>`</b>||define||
-||<b>$</b>||embed||
-||<b>\</b>||escape||
-||<b>&</b>||push||
-||<b>^</b>||self-reference||
-||<b>~</b>||quote||
+||<b>default</b>||<b>function</b>||<b>storing</b>||<b>retrieving</b>||
+||<b>`</b>||define||{toggle!}||{toggle@}||
+||<b>$</b>||embed||{embed!}||{embed@}||
+||<b>\</b>||escape||{escape!}||{escape@}||
+||<b>&</b>||push||{push!}||{push@}||
+||<b>^</b>||self-reference||{self!}||{self@}||
+||<b>~</b>||quote||{quote!}||{quote@}||
 
 ==Buit-ins:==
 
