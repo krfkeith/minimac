@@ -293,6 +293,8 @@
  =>-------<br/>
 </b></tt>
  
+ The {push!} built-in can be used to change the reserved character from the default of '*&*' to another character.
+
 ==4.3 Stack effect notation==
 
  The following section is a catalog of the minimac's built-ins, included with each built-in's description is a stack effect diagram, in a notation similar to that used by the Forth language, a stack-based language which inspired much of minimac's philosophy and design.
