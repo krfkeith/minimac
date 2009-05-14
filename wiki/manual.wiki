@@ -103,7 +103,7 @@
  =>-------<br/>
 </b></tt>
 
- The {toggle!} built-in can be used to change the reserved character from the default of '*`*' to another character.
+ The *{toggle!}* built-in can be used to change the reserved character from the default of '*`*' to another character.
 
 ==3.2 Redefining a macro==
 
@@ -146,7 +146,7 @@
 
 ==3.4 Self-referential macros==
 
- The caret '*^*' character in the body of a macro expands to the latest definition of the same name as the macro which contains it. The {self!} built-in can be used to change the reserved character from the default of '*^*'.
+ The caret '*^*' character in the body of a macro expands to the latest definition of the same name as the macro which contains it. The *{self!}* built-in can be used to change the reserved character from the default of '*^*'.
 
 <tt><b>
  ```greet```hello```<br/>
@@ -180,7 +180,7 @@
  =>George's car<br/>
 </b></tt>
 
- The {embed!} built-in can be used to change the reserved character from the default of '*$*' to another character.
+ The *{embed!}* built-in can be used to change the reserved character from the default of '*$*' to another character.
 
 ==3.6 Escaping==
 
@@ -203,21 +203,23 @@
  =>a$test$e<br/>
 </b></tt>
 
- The {escape!} built-in can be used to change the reserved character from the default of '*\*' to another character.
+ The *{escape!}* built-in can be used to change the reserved character from the default of '*\*' to another character.
 
-{{{ [...STD should we use a character other than '\' as the escape character?...] }}}
+{{{ [...STD should we use a character other than '\' as the default escape character?...] }}}
 
 ==3.7 Ignoring whitespace within a definition==
 
  The left-bracket '*`[`*'  character within a definition causes runs of whitespace to be replaced by runs of the dollar '*$*' character. The right-bracket '*`]`*' resumes normal whitespace expansion.
 
- The {wsoff!} and {wson!} built-ins can be used to change the reserved characters from their defaults of '*`[`*' and '*`]`*' to other characters.
+ The *{wsoff!}* and *{wson!}* built-ins can be used to change the reserved characters from their defaults of '*`[`*' and '*`]`*' to other characters.
+
+{{{ [...STD should we use a character other than brackets as the default characters?...] }}}
 
 ==3.8 Quoting==
 
  A string surrounded by the tilde character '*~*' is output as a literal string (i.e. without expansion).  
 
- The {quote!} built-in can be used to change the reserved character from the default of '*~*' to another character.
+ The *{quote!}* built-in can be used to change the reserved character from the default of '*~*' to another character.
 
 =4 Built-in functions=
 
@@ -293,7 +295,7 @@
  =>-------<br/>
 </b></tt>
  
- The {push!} built-in can be used to change the reserved character from the default of '*&*' to another character.
+ The *{push!}* built-in can be used to change the reserved character from the default of '*&*' to another character.
 
 ==4.3 Stack effect notation==
 
