@@ -1,4 +1,4 @@
-#summary List of enhancements being considered
+#summary List of enhancements being considered, any suggestions are welcome
 
 ||#||<b>enhancement</b>||<b>status</b>||<b>notes</b>||
 ||1||<s>output diversions</s>||done||{divert} {undivert}||
