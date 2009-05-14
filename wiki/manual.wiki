@@ -573,7 +573,7 @@
 
  {.s} ( -- )
 
-==5.11 Reserved Special characters==
+==5.11 Reserved special characters==
  
  Operators that for checking and changing minimac's reserved special characters. 
 
