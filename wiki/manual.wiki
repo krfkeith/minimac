@@ -222,7 +222,7 @@
  A string surrounded by the tilde character '*~*' is output as a literal string (i.e. without expansion).  
 
 <tt><b> 
- `hello`hi there!`<br/>
+ ```hello```hi there!```<br/>
  =><br/>
  ~hello~<br/>
  =><br/>
