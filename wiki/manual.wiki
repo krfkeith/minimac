@@ -547,9 +547,21 @@
 
  {len} ( str -- u )
 
+==={lower} - convert to lowercase===
+
+ {lower} ( str -- str' )
+
 ==={substr} - extract a substring===
 
  {substr} ( str start length -- str' )
+
+==={tr} - translate characters===
+
+ {tr} ( str from to -- str' )
+
+==={upper} - convert to uppercase===
+
+ {upper} ( str -- str' )
 
 ==5.9 Bitwise==
  
