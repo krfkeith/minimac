@@ -7,7 +7,7 @@
 ||4||<s>user-configurable special characters</s>||done||||
 ||5||<s>non-expanding version of {include}</s>||done||{verbatim}||
 ||6||shell commands||planned||||
-||7||<s>character translation built-in</s>||planned||{tr}||
+||7||<s>character translation built-in</s>||done||{tr}||
 ||8||date & time handling||under consideration||||
 ||9||random number generation||under consideration||||
 ||10||debugging & diagnostic tools||planned||||
