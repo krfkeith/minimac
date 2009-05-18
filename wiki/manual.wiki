@@ -42,10 +42,12 @@
 =2 Invoking minimac=
 
  The minimac executable is named 'mm'.
- Minimac reads from standard input and writes the processed text to standard output, error messages are written to standard error
+ Minimac reads from standard input and writes the processed text to standard output, error messages are written to standard error.
  Minimac currently does not recognize any command-line switches or options.
 
  Minimac exits 0 on success, and 1 if an error occurs.
+
+ Minimac reads and interprets input one character at a time, a good way to learn minimac is to type the examples from this manual directly from your shell console. 
 
 =3 Defining macros=
 
