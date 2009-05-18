@@ -225,7 +225,6 @@
  ```hello```hi there!```<br/>
  =><br/>
  ~hello~<br/>
- =><br/>
  =>hello<br/>
 </b></tt>
 
