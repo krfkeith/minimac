@@ -106,10 +106,10 @@
 <tt>
  ```H2 ( count title -- count+1 ) ```{{{<h2>}}}${over}${?}$. {?}${++}${{{</h2>}}}```<br/>
  <br/>
- {{{1&}}} First\ Section& H2<br/>
+ {{{1&}}} ~First Section~& H2<br/>
  =>{{{<h2>1. First Section</h2>}}}<br/>
  <br/>
- Second\ Section& H2<br/>
+ ~Second Section~& H2<br/>
  =>{{{<h2>2. Second Section</h2>}}}<br/>
  <br/>
  Conclusion& H2<br/>
