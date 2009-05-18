@@ -221,6 +221,14 @@
 
  A string surrounded by the tilde character '*~*' is output as a literal string (i.e. without expansion).  
 
+<tt><b> 
+ `hello`hi there!`<br/>
+ =><br/>
+ ~hello~<br/>
+ =><br/>
+ =>hello<br/>
+</b></tt>
+
  The *{quote!}* built-in can be used to change the reserved character from the default of '*~*' to another character.
 
 =4 Built-in functions=
@@ -272,6 +280,19 @@
  =>Items on the stack (2):<br/>
  `=>stack[1] => [foo]`<br/>
  `=>stack[0] => [5]`<br/>
+ =>-------<br/>
+</b></tt>
+
+ Literal (i.e. unexpanded) strings can be pushed onto the stack:
+
+<tt><b>
+ ~just a test~&<br/>
+ =><br/>
+ {.s}<br/>
+ =><br/>
+ =>-------<br/>
+ =>Items on the stack (1):<br/>
+ `=>stack[0] => [just a test]`<br/>
  =>-------<br/>
 </b></tt>
 
