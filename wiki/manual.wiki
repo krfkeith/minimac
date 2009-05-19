@@ -627,6 +627,13 @@
 
 ==5.12 Miscellaneous==
 
+==={#} - comment===
+
+ {#} ( -- )
+
+ Treats the remainder of the line as a comment.
+
+
 ==={last} - last dictionary definition===
 
  {last} ( -- name )
@@ -636,6 +643,10 @@
 ==={remove} - file deletion===
 
  {remove} ( filename -- )
+
+==={shell} - execute an operating system command===
+
+ {shell} ( str -- return-code )
 
 =6 Extensions=
 
