@@ -187,6 +187,7 @@
 ==3.6 Escaping==
 
  The backslash '*\*' character is used as an escape character, i.e. the character immediately following the backslash is interpreted literally.
+{{{ [...STD there's more to it than this, a more thorough explanation is required here...] }}}
 
 <tt><b>
  ```test```bcd```<br/>
