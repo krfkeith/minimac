@@ -382,7 +382,7 @@
  Example:
   ...coming soon
 
-==5.2 Comparison==
+==5.2 Integer comparison==
 
  All comparison operators return canonical truth values, -1 for true, 0 for false.
 
