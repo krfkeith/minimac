@@ -409,6 +409,39 @@
  
 ==5.4 Control flow==
 
+==={case} - case conditional===
+
+ {case} ( x y name -- ???|x )
+
+ If x and y are identical, removes x and y from the stack, and executes the macro who's name is at the top of stack, the remainder of the enclosing definition is no longer expanded. Conversely, if x and y do not match, x remains on the stack and expansion of the remainder of the enclosing definition resumes.
+
+ The {case} built-in is the building block for constructing what are variously known as case or switch statements, where a value x is compared to various values and if a match is found a corresponding block of code is executed.
+ 
+ Example: 
+<tt><b>
+ ```test ( x -- )```{{{[}}} a& this& {case} b& that& {case} other (${.}$) {{{]}}}```<br/>
+ =><br/>
+ <br/>
+ ```this```I just performed the first case's action```<br/>
+ =><br/>
+ <br/>
+ ```that```I just performed the second case's action```<br/>
+ =><br/>
+ <br/>
+ ```other```No matching case was found```<br/>
+ =><br/>
+ <br/>
+ a& test<br/>
+ =>I just performed the first case's action<br/>
+ <br/>
+ b& test<br/>
+ =>I just performed the second case's action<br/>
+ <br/>
+ z& test<br/>
+ =>No matching case was found (z)<br/>
+ <br/>
+</b></tt>
+
 ==={continue} - conditional expansion===
 
  {continue} ( x -- x| )
@@ -571,6 +604,10 @@
 ==={lower} - convert to lowercase===
 
  {lower} ( str -- str' )
+
+==={match?} - test for string equality===
+
+ {match?} ( str1 str2 -- 0|-1 )
 
 ==={substr} - extract a substring===
 
