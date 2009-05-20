@@ -12,4 +12,4 @@
 ||9||random number generation||under consideration||||
 ||10||debugging & diagnostic tools||planned||||
 ||11||discontinue using brackets as special chars||planned||||
-||12||case statement||planned||||
+||12||case statement||next release (0.0.33)||||
