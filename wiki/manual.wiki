@@ -419,7 +419,7 @@
 
 ==={execute} - unconditional execution===
 
- {execute} ( name -- )
+ {execute} ( name -- ??? )
 
  Expands the macro whose name is on the top of the stack.
 
@@ -440,7 +440,7 @@
 
 ==={if} - conditional execution===
 
- {if} ( n name -- )
+ {if} ( n name -- ??? )
 
  Expands the macro whose name is on the top of the stack if n is non-zero.
 
@@ -461,7 +461,7 @@
 
 ==={ifelse} - if-else conditional execution===
 
- {ifelse} ( n if-name else-name -- )
+ {ifelse} ( n if-name else-name -- ??? )
 
  Expands the macro 'if-name' if n is non-zero, otherwise executes the macro or built-in 'else-name'.
 
