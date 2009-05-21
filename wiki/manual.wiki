@@ -635,6 +635,8 @@
 
 ==5.10 Diagnostic utilities==
 
+ All diagnostic utilities write their output to the standard error stream.
+
 ==={.a} - display auxiliary stack contents===
 
  {.a} ( -- )
@@ -698,6 +700,8 @@
 ||<b>{2drop}</b>||( x y -- )||discard top two stack items||
 ||<b>{2dup}</b>||( x y -- x y x y )||duplicate to two stack item||
 ||<b>{empty?}</b>||( name -- -1|0)||test if macro is empty||
+||<b>{exch}</b>||( x name -- y )||exchange the value of a variable with a stack item||
+||<b>{@++}</b>||( name -- u )||fetch and post-increment a variable||
 ||<b>{lift}</b>||( x y -- x x y )||duplicate next of stack||
 ||<b>{max}</b>||( n1 n2 -- n )||maximum||
 ||<b>{min}</b>||( n1 n2 -- n )||minimum||
