@@ -13,3 +13,4 @@
 ||10||debugging & diagnostic tools||planned||||
 ||11||discontinue using brackets as special chars||planned||||
 ||12||<s>case statement</s>||done||{case}||
+||13||change {.s} {.a} {.m} so they output to stderr||next release (0.0.34)||||
