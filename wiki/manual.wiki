@@ -148,7 +148,7 @@
 
 ==3.4 Self-referential macros==
 
- The caret '*`^`*' character in the body of a macro expands to the latest definition of the same name as the macro which contains it. The *{self!}* built-in can be used to change the reserved character from the default of '*`^`*'.
+ The caret '*`^`*' character in the body of a macro expands to the latest definition of the same name as the macro which contains it.
 
 <tt><b>
  ```greet```hello```<br/>
@@ -163,6 +163,8 @@
  greet<br/>
  => Well hello there!<br/>
 </b></tt>
+
+ The *{self!}* built-in can be used to change the reserved character from the default of '*`^`*'.
 
 ==3.5 Embedded macro names==
 
@@ -268,7 +270,7 @@
  Macro names can be pushed onto the stack:
 
 <tt><b>
- ```foo```just a test```<br/>
+ ```foo```this is just a test```<br/>
  =><br/>
  <br/>
  foo&<br/>
@@ -283,24 +285,11 @@
  =>-------<br/>
 </b></tt>
 
- Literal (i.e. unexpanded) strings can be pushed onto the stack:
-
-<tt><b>
- ~just a test~&<br/>
- =><br/>
- {.s}<br/>
- =><br/>
- =>-------<br/>
- =>Items on the stack (1):<br/>
- `=>stack[0] => [just a test]`<br/>
- =>-------<br/>
-</b></tt>
-
  Use the expand `*{?}*' built-in to pop the top item off and expand it.
 
 <tt><b> 
  {?}<br/>
- =>this is a test<br/>
+ =>this is just a test<br/>
  <br/>
  {.s}<br/>
  =><br/>
@@ -317,7 +306,20 @@
  =>Items on the stack (0):<br/>
  =>-------<br/>
 </b></tt>
- 
+
+ Literal (i.e. unexpanded) strings can also be pushed onto the stack:
+
+<tt><b>
+ ~another test~&<br/>
+ =><br/>
+ {.s}<br/>
+ =><br/>
+ =>-------<br/>
+ =>Items on the stack (1):<br/>
+ `=>stack[0] => [another test]`<br/>
+ =>-------<br/>
+</b></tt>
+
  The *{push!}* built-in can be used to change the reserved character from the default of '*&*' to another character.
 
 ==4.3 Stack effect notation==
