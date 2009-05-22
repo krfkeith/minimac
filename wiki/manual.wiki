@@ -475,13 +475,13 @@
 
  Exits to the OS using the top of stack as the exit code. If the stack is empty when {exit} is invoked a default exit code of 0 is used. 
 
-==={?} - uncondition expansion===
+==={?} - expand===
 
  {?} ( action -- )
 
  Expand the top of stack. 
 
-==={if} - conditional execution===
+==={if} - if conditional===
 
  {if} ( n action -- ??? )
 
@@ -502,7 +502,7 @@
  =><br/>
 </b></tt>
 
-==={ifelse} - if-else conditional execution===
+==={ifelse} - if-else conditional===
 
  {ifelse} ( n if-action else-action -- ??? )
 
@@ -526,7 +526,7 @@
  =>Goodbye!<br/>
 </b></tt>
 
-==={repeat} - looping===
+==={repeat} - looping, tail recursion===
 
  {repeat} ( -- )
 
