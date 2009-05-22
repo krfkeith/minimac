@@ -16,4 +16,4 @@
 ||13||<s>change {.s} {.a} {.m} so they output to stderr</s>||done||||
 ||14||'slurping' a file into a variable||under consideration||||
 ||15||deprecate the {execute} built-in||under consideration||||
-||16||built-in which determines if a macro name is defined||under consideration||{defined?} ( name -- -1|0)||
+||16||built-in which determines if a macro name is defined||under consideration||{defined?} ( name -- -1|0 )||
