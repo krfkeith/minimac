@@ -19,7 +19,7 @@
 
 ==1.2 Current Status==
 
- This project was started in April 2009. The software is currently in alpha release. 
+ This project was started in April 2009. The software is currently in alpha release, it meets the author's current needs. Changes or additions may be made as flaws are found or new user requirements are submitted.
 
  This Wiki is an initial draft of the users manual.
  
