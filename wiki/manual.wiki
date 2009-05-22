@@ -47,7 +47,7 @@
 
  Minimac exits 0 on success, and 1 if an error occurs.
 
- Minimac reads and interprets input one character at a time, a good way to learn minimac is to type the examples from this manual directly from your shell console. 
+ Since Minimac is a filter program, a good way to learn minimac is to interactively type the examples in this manual from your shell console into Minimac's standard input.
 
 =3 Defining macros=
 
