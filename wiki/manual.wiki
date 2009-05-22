@@ -413,9 +413,9 @@
 
 ==={case} - case conditional===
 
- {case} ( x y name -- ???|x )
+ {case} ( x y action -- ???|x )
 
- If x and y are identical, removes x and y from the stack, and executes the macro who's name is at the top of stack, the remainder of the enclosing definition is no longer expanded. Conversely, if x and y do not match, x remains on the stack and expansion of the remainder of the enclosing definition resumes.
+ If x and y are identical, removes x and y from the stack, and expands the action string at the top of stack, the remainder of the enclosing definition is no longer expanded. Conversely, if x and y do not match, x remains on the stack and expansion of the remainder of the enclosing definition resumes.
 
  The {case} built-in is the building block for constructing what are variously known as case or switch statements, where a value x is compared to various values and if a match is found a corresponding block of code is executed.
  
@@ -452,11 +452,11 @@
 
  Example: See {repeat}
 
-==={execute} - unconditional execution===
+==={execute} - expand a defined macro===
 
  {execute} ( name -- ??? )
 
- Expands the macro whose name is on the top of the stack.
+ Expands the macro whose name is on the top of the stack, causes execution to fail if name is undefined.
 
  Example:
 <tt><b>
@@ -473,11 +473,17 @@
 
  Exits to the OS using the top of stack as the exit code. If the stack is empty when {exit} is invoked a default exit code of 0 is used. 
 
+==={?} - uncondition expansion===
+
+ {?} ( action -- )
+
+ Expand the top of stack. 
+
 ==={if} - conditional execution===
 
- {if} ( n name -- ??? )
+ {if} ( n action -- ??? )
 
- Expands the macro whose name is on the top of the stack if n is non-zero.
+ Expands the action string on the top of the stack if n is non-zero.
 
  Example:
 <tt><b>
@@ -496,9 +502,9 @@
 
 ==={ifelse} - if-else conditional execution===
 
- {ifelse} ( n if-name else-name -- ??? )
+ {ifelse} ( n if-action else-action -- ??? )
 
- Expands the macro 'if-name' if n is non-zero, otherwise executes the macro or built-in 'else-name'.
+ Expands the if-action if n is non-zero, otherwise expands the else-action.
 
  Example:
 <tt><b>
@@ -541,12 +547,6 @@
  {.} ( str -- )
 
  Print the top of stack without expansion.
-
-==={?} - expand===
-
- {?} ( token -- )
-
- Expand the top of stack. 
 
 ==={divert} - output diversion===
 
