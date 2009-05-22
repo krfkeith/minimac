@@ -458,6 +458,8 @@
 
  Expands the macro whose name is on the top of the stack, causes execution to fail if name is undefined.
 
+<font color="red">{{{ [--note: {execute} will likely be deprecated and replaced with {defined?} which can be used to check if a macro is defined before attempting to expand it with {?} ---] }}}</font>
+
  Example:
 <tt><b>
  ```HI```Hello!```<br/>
