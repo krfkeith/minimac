@@ -415,10 +415,10 @@
 
  {case} ( x y action -- ???|x )
 
- If x and y are identical, removes x and y from the stack, and expands the action string at the top of stack, the remainder of the enclosing definition is no longer expanded. Conversely, if x and y do not match, x remains on the stack and expansion of the remainder of the enclosing definition resumes.
-
  The {case} built-in is the building block for constructing what are variously known as case or switch statements, where a value x is compared to various values and if a match is found a corresponding block of code is executed.
  
+ If x and y are identical, removes x and y from the stack, and expands the action string at the top of stack, the remainder of the enclosing definition is no longer expanded. Conversely, if x and y do not match, x remains on the stack and expansion of the remainder of the enclosing definition resumes.
+
  Example: 
 <tt><b>
  ```test ( x -- )```{{{[}}} a& this& {case} b& that& {case} other (${.}$) {{{]}}}```<br/>
