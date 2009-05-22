@@ -41,8 +41,12 @@
 
 =2 Invoking minimac=
 
- The minimac executable is named 'mm'.
- Minimac reads from standard input and writes the processed text to standard output, error messages are written to standard error.
+ Minimac consists of a single OS-independent Ansi C source file, the naming convention is mm-<version info>.c To compile minimac refer to your C compiler instructions, a typical compile on a Unix based sytem would look something like this:
+<tt>
+ cc -Wall -o mm mm-0.1.0-alpha.c
+</tt>
+
+ The minimac executable is named 'mm'. Minimac reads from standard input and writes the processed text to standard output, error messages are written to standard error.
  Minimac currently does not recognize any command-line switches or options.
 
  Minimac exits 0 on success, and 1 if an error occurs.
