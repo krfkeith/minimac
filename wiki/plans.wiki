@@ -11,6 +11,7 @@
 ||8||date & time handling||under consideration||||
 ||9||random number generation||under consideration||||
 ||10||debugging & diagnostic tools||planned||||
-||11||discontinue using brackets as special chars||planned||||
+||11||discontinue using brackets as special chars||under consideration||||
 ||12||<s>case statement</s>||done||{case}||
 ||13||<s>change {.s} {.a} {.m} so they output to stderr</s>||done||||
+||14||'slurping' a file into a variable||under consideration||||
