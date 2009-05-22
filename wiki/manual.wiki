@@ -41,7 +41,8 @@
 
 =2 Invoking minimac=
 
- Minimac consists of a single OS-independent Ansi C source file, the naming convention is mm-<version info>.c To compile minimac refer to your C compiler instructions, a typical compile on a Unix based sytem would look something like this:
+ Minimac consists of a single OS-independent Ansi C source file, the naming convention is <i>mm-<version info>.c</i>
+ To compile minimac refer to your C compiler instructions, a typical compile on a Unix based sytem would look something like this:
 <tt>
  cc -Wall -o mm mm-0.1.0-alpha.c
 </tt>
@@ -704,7 +705,7 @@
 
 =6 Extensions=
 
- Sample extension macros are supplied in the '*extend-<version-infor>.mm*' file.
+ Sample extension macros are supplied in the <i>extend-<version-info>.mm</i> file.
 
 ||<b>macro</b>||<b>stack effect</b>||<b>description</b>||
 ||<b>{>>aux}</b>||( x -- x ) aux:( -- x )||copy to auxiliary stack||
