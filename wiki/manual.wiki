@@ -222,7 +222,7 @@
 
 ==3.8 Quoting==
 
- A string surrounded by the tilde character '*~*' is output as a literal string (i.e. without expansion).  
+ A string surrounded by the tilde character '*~*' is output as a literal string (i.e. without expansion, but with escaping).  
 
 <tt><b> 
  ```hello```hi there!```<br/>
