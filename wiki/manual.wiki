@@ -482,7 +482,7 @@
 
 ==={?} - expand===
 
- {?} ( action -- )
+ {?} ( action -- ??? )
 
  Expand the top of stack. 
 
