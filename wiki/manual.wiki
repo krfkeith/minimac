@@ -705,7 +705,7 @@
 
 =6 Extensions=
 
- Sample extension macros are supplied in the <i>extend-<version-info>.mm</i> file.
+ Sample extension macros are supplied in the _extend-<version info>.mm_ file.
 
 ||<b>macro</b>||<b>stack effect</b>||<b>description</b>||
 ||<b>{>>aux}</b>||( x -- x ) aux:( -- x )||copy to auxiliary stack||
