@@ -19,9 +19,9 @@
 
 ==1.2 Current Status==
 
- This project was started in April 2009. The software, currently in pre-alpha status, is being developed in my spare time concurrently with the writing of this manual
+ This project was started in April 2009. The software is currently in alpha release. 
 
- This Wiki will serve as an initial draft of an eventual users manual.
+ This Wiki is an initial draft of the users manual.
  
  All feedback is very welcome, I've set up a Google Group for discussing the project: http://groups.google.com/group/minimac-discuss
 
