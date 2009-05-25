@@ -752,7 +752,7 @@
 ||<b>^</b>||self-reference||{self!}||{self@}||yes||no||
 ||<b>~</b>||quote||{quote!}||{quote@}||yes||yes||
 ||<b>{{{[}}}</b>||white space off||{wsoff!}||{wsoff@}||yes||no||
-||<b>{{{]}}}</b>||white space on||{wson!}||{wson@}||yes||yes||
+||<b>{{{]}}}</b>||white space on||{wson!}||{wson@}||yes||no||
 
 ==Buit-ins:==
 
