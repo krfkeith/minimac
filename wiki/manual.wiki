@@ -751,6 +751,8 @@
 ||<b>&</b>||push||{push!}||{push@}||
 ||<b>^</b>||self-reference||{self!}||{self@}||
 ||<b>~</b>||quote||{quote!}||{quote@}||
+||<b>{{{[}}}</b>||white space off||{wsoff!}||{wsoff@}||
+||<b>{{{]}}}</b>||white space on||{wson!}||{wson@}||
 
 ==Buit-ins:==
 
