@@ -600,7 +600,7 @@
 
 ==={cat} - concatenate strings===
 
- {cat} ( str1 str2 -- str2+str1 )
+ {cat} ( str1 str2 -- str2str1 )
 
 ==={empty} - empty a string===
 
