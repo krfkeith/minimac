@@ -540,7 +540,7 @@
  Example:
 
 <tt><b>
- ```stars```{{{[}}} {continue} {--} {{{*}}} {repeat} {{{]}}}```<br/>
+ ```stars ( u -- ) ```{{{[}}} {continue} {--} {{{*}}} {repeat} {{{]}}}```<br/>
  =><br/>
  <br/>
  3& stars<br/>
