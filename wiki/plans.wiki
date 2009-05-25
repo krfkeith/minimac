@@ -1,19 +1,22 @@
 #summary List of enhancements being considered, any suggestions are welcome
 
-||#||<b>enhancement</b>||<b>status</b>||<b>notes</b>||
-||1||<s>output diversions</s>||done||{divert} {undivert}||
-||2||<s>single-line comments</s>||done||{#}||
-||3||multi-line comments||under consideration||||
-||4||<s>user-configurable special characters</s>||done||||
-||5||<s>non-expanding version of {include}</s>||done||{verbatim}||
-||6||<s>shell commands</s>||done||{shell}||
-||7||<s>character translation built-in</s>||done||{tr}||
-||8||date & time handling||under consideration||||
-||9||random number generation||under consideration||||
-||10||debugging & diagnostic tools||planned||||
-||11||discontinue using brackets as special chars||under consideration||||
-||12||<s>case statement</s>||done||{case}||
-||13||<s>change {.s} {.a} {.m} so they output to stderr</s>||done||||
-||14||'slurping' a file into a variable||under consideration||||
-||15||deprecate the {execute} built-in||under consideration||||
-||16||built-in which determines if a macro name is defined||under consideration||{defined?} ( name -- -1|0 )||
+||#||<b>enhancement</b>||<b>status</b>||<b>notes</b>||<b>suggested by</b>||
+||1||<s>output diversions</s>||done||{divert} {undivert}|| ||
+||2||<s>single-line comments</s>||done||{#}|| ||
+||3||multi-line comments||under consideration|| || ||
+||4||<s>user-configurable special characters</s>||done|| || ||
+||5||<s>non-expanding version of {include}</s>||done||{verbatim}|| ||
+||6||<s>shell commands</s>||done||{shell}|| ||
+||7||<s>character translation built-in</s>||done||{tr}|| ||
+||8||date & time handling||under consideration|| || ||
+||9||random number generation||under consideration|| ||| ||
+||10||debugging & diagnostic tools||planned||| || ||
+||11||discontinue using brackets as special chars||under consideration|| || ||
+||12||<s>case statement</s>||done||{case}|| ||
+||13||<s>change {.s} {.a} {.m} so they output to stderr</s>||done|| || ||
+||14||'slurping' a file into a variable||under consideration|| || ||
+||15||deprecate the {execute} built-in||under consideration|| || ||
+||16||built-in which determines if a macro name is defined||under consideration||{defined?} ( name -- -1|0 )|| ||
+||17||Short definitions on the shell command line||under consideration|| ||SteveB||
+||18||Builtin function that looks up an environment variable||planned||{env} ( name -- value )||SteveB||
+||19||environmental variable for directories to be searched for {include} and {verbatim}||planned||MINIMAC_PATH||SteveB||
