@@ -673,6 +673,10 @@
 ||<b>{self!}</b>||( c --)||store s<i>elf-reference</i> character||
 ||<b>{toggle@}</b>||(-- c)||fetch <i>define toggle</i> character||
 ||<b>{toggle!}</b>||( c --)||store <i>define toggle</i> character|| 
+||<b>{wsoff@}</b>||(-- c)||fetch <i>whitespace off</i> character||
+||<b>{wsoff!}</b>||( c --)||store <i>whitespace off</i> character|| 
+||<b>{wson@}</b>||(-- c)||fetch <i>whitespace on</i> character||
+||<b>{wson!}</b>||( c --)||store <i>whitespace on</i> character|| 
 
 ==5.12 Miscellaneous==
 
