@@ -15,8 +15,8 @@
 ||12||<s>case statement</s>||done||{case}|| ||
 ||13||<s>change {.s} {.a} {.m} so they output to stderr</s>||done|| || ||
 ||14||'slurping' a file into a variable||under consideration|| || ||
-||15||deprecate the {execute} built-in||under consideration|| || ||
+||15||deprecate the {execute} built-in||next release (0.1.1)|| || ||
 ||16||built-in which determines if a macro name is defined||under consideration||{defined?} ( name -- -1|0 )|| ||
 ||17||Short definitions on the shell command line||under consideration|| ||SteveB||
-||18||Builtin function that looks up an environment variable||planned||{env} ( name -- value )||SteveB||
+||18||Builtin function that looks up an environment variable||next release (0.1.1)||{env} ( name -- value )||SteveB||
 ||19||environmental variable for directories to be searched for {include} and {verbatim}||planned||MINIMAC_PATH||SteveB||
