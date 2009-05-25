@@ -744,7 +744,7 @@
 
 ==Special characters:==
 
-||<b>default</b>||<b>function</b>||<b>storing</b>||<b>retrieving</b>||<b>affects definition?</b>||<b>affects expansion?</b>
+||<b>default</b>||<b>function</b>||<b>storing</b>||<b>retrieving</b>||<b>affects definition?</b>||<b>affects expansion?</b>||
 ||<b>`</b>||define||{toggle!}||{toggle@}||yes||yes||
 ||<b>$</b>||embed||{embed!}||{embed@}||yes||no||
 ||<b>\</b>||escape||{escape!}||{escape@}||yes||yes||
