@@ -746,7 +746,7 @@
 
 ||<b>default</b>||<b>function</b>||<b>storing</b>||<b>retrieving</b>||<b>affects definition?</b>||<b>affects expansion?</b>||
 ||<b>`</b>||define||{toggle!}||{toggle@}||yes||yes||
-||<b>$</b>||embed||{embed!}||{embed@}||yes||no||
+||<b>$</b>||embed||{embed!}||{embed@}||no||yes||
 ||<b>\</b>||escape||{escape!}||{escape@}||yes||yes||
 ||<b>&</b>||push||{push!}||{push@}||no||yes||
 ||<b>^</b>||self-reference||{self!}||{self@}||yes||no||
