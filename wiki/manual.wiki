@@ -457,23 +457,6 @@
 
  Example: See {repeat}
 
-==={execute} - expand a defined macro===
-
- {execute} ( name -- ??? )
-
- Expands the macro whose name is on the top of the stack, causes execution to fail if name is undefined.
-
-<font color="red">{{{ [--note: {execute} will likely be deprecated and replaced with {defined?} which can be used to check if a macro is defined before attempting to expand it with {?} ---] }}}</font>
-
- Example:
-<tt><b>
- ```HI```Hello!```<br/>
- =><br/>
- <br/>
- HI& {execute}<br/>
- =>Hello!<br/>
-</b></tt>
-
 ==={exit} - exiting to the OS===
 
  {exit} ( n -- ) or {exit} ( -- )
@@ -547,6 +530,12 @@
  =>`***`<br/>
 </b></tt>
 
+==={?repeat} - conditional looping, tail recursion===
+
+ {?repeat} ( n -- )
+
+ Repeats the expansion of the enclosing definition if the top of stack is non-zero.
+
 ==5.5 Input and Output==
 
 ==={.} - print===
@@ -584,6 +573,7 @@
 ||<b>operator</b>||<b>stack effect</b>||<b>description</b>||
 ||<b>{drop}</b>||( x -- )||drop top of stack||
 ||<b>{dup}</b>||( x -- x x )||duplicate top of stack||
+||<b>{?dup}</b>||( x|0 -- x| )||duplicate top of stack if non-zero||
 ||<b>{over}</b>||( x1 x2 -- x1 x2 x1 )||duplicate next of stack||
 ||<b>{swap}</b>||( x1 x2 -- x2 x1 )||swap the top two items of the stack||
 
@@ -600,7 +590,7 @@
 
 ==={cat} - concatenate strings===
 
- {cat} ( str1 str2 -- str2str1 )
+ {cat} ( str1 str2 -- str1str2 )
 
 ==={empty} - empty a string===
 
@@ -635,10 +625,12 @@
  If provided with canonical truth values, i.e. -1 for true and 0 for false, the bitwise operators can also serve as logical operators.
 
 ||<b>operator</b>||<b>stack effect</b>||<b>description</b>||
-||<b>{and}</b>||( n1 n2 -- n1&n2 )||bitwise and||
-||<b>{not}</b>||( n -- ~n )||bitwise not||
-||<b>{or}</b>||( n1 n2 -- n1`|`n2 )||bitwise or||
-||<b>{xor}</b>||( n1 n2 -- n1`|`n2 )||bitwise xor||
+||<b>{and}</b>||( u1 u2 -- u1&u2 )||bitwise and||
+||<b>{not}</b>||( u -- ~u )||bitwise not||
+||<b>{or}</b>||( u1 u2 -- u1`|`u2 )||bitwise or||
+||<b>{xor}</b>||( u1 u2 -- u1`|`u2 )||bitwise xor||
+||<b>{>>}</b>||( u1 u2 -- u1`>>`u2 )||bitwise shift right||
+||<b>{<<}</b>||( u1 u2 -- u1'<<'u2 )||bitwise shift left||
 
 ==5.10 Diagnostic utilities==
 
@@ -686,6 +678,9 @@
 
  Treats the remainder of the line as a comment.
 
+==={env} - get the value of an OS environment variable===
+
+ {env} ( env-var -- value )
 
 ==={last} - last dictionary definition===
 
