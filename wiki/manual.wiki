@@ -471,7 +471,7 @@
 
 ==={if} - if conditional===
 
- {if} ( n action -- ??? )
+ {if} ( n action -- ???| )
 
  Expands the action string on the top of the stack if n is non-zero.
 
