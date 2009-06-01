@@ -722,9 +722,9 @@
 ||<b>{nip}</b>||( x y -- y )||discard next of stack||```{nip} ( x y -- y ) ```{swap}${drop}```||
 ||<b>{2pop}</b>||( -- x y ) aux:( x y -- )||pop 2 items from auxiliary stack||```{2pop} ( -- x y ) aux:( x y -- ) ```{pop}${pop}${swap}```||
 ||<b>{2push}</b>||( x y -- ) aux:( -- x y )||push 2 items to auxiliary stack||```{2push} ( x y -- ) aux:( -- x y ) ```{swap}${push}${push}```||
-||<b>{rot}</b>||( x y z -- y z x )||||```{rot} ( x y z -- y z x ) ```{push}${swap}${pop}${swap}```||
-||<b>{-rot}</b>||( x y z -- z x y )||||```{-rot} ( x y z -- z x y ) ```{swap}${push}${swap}${pop}```||
-||<b>{tuck}</b>||( x y -- y x y )||||```{tuck} ( x y -- y x y ) ```{swap}${over}```||
+||<b>{rot}</b>||( x y z -- y z x )|| ||```{rot} ( x y z -- y z x ) ```{push}${swap}${pop}${swap}```||
+||<b>{-rot}</b>||( x y z -- z x y )| |||```{-rot} ( x y z -- z x y ) ```{swap}${push}${swap}${pop}```||
+||<b>{tuck}</b>||( x y -- y x y )|| ||```{tuck} ( x y -- y x y ) ```{swap}${over}```||
 
 {{{[}}} ...more to come ... {{{]}}}
 =7 Sample macros=
