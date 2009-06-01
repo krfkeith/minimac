@@ -22,3 +22,4 @@
 ||19||environmental variable for directories to be searched for {include} and {verbatim}||planned||MINIMAC_PATH||SteveB||
 ||<s>20</s>||<s>change {cat} from ( str1 str2 -- str2str1 ) to ( str1 str2 -- str1str2 )</s>||done|| || ||
 ||21||remove {empty} from the core language, provide as extension instead||next release (0.1.2 alpha)||```{empty} ( name -- ) ```& {swap}${!}```||||
+||22||append to a diversion||next release (0.1.2)||{divert+} ( filename -- )||||
