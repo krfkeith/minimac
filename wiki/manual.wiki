@@ -596,6 +596,10 @@
 
  {empty} ( name -- )
 
+_note: In the next release {empty} will be moved out of the core interpreter and added to extend.mm instead:_
+
+```{empty} ( name -- ) ```& {swap}${!}```
+
 ==={len} - string length===
 
  {len} ( str -- u )
