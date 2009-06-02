@@ -21,5 +21,5 @@
 ||<s>18</s>||<s>Builtin function that looks up an environment variable</s>||done||{env} ( name -- value )||SteveB||
 ||19||environmental variable for directories to be searched for {include} and {verbatim}||planned||MINIMAC_PATH||SteveB||
 ||<s>20</s>||<s>change {cat} from ( str1 str2 -- str2str1 ) to ( str1 str2 -- str1str2 )</s>||done|| || ||
-||21||remove {empty} from the core language, provide as extension instead||next release (0.1.2 alpha)||```{empty} ( name -- ) ```& {swap}${!}```||||
-||22||append to a diversion||next release (0.1.2)||{divert+} ( filename -- )||||
+||<s>21</s>||<s>remove {empty} from the core language, provide as extension instead</s>||done||```{empty} ( name -- ) ```& {swap}${!}```||||
+||<s>22</s>||<s>append to a diversion</s>||done||{divert+} ( filename -- )||||
