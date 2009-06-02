@@ -550,6 +550,12 @@
 
  Temporarily diverts the output stream to a file. Overwrites the file if it already exists.
 
+==={divert+} - output diversion append===
+
+ {divert+} ( filename -- )
+
+ Temporarily diverts the output stream to a file. Appends to the file if it already exists.
+
 ==={include} - file inclusion===
 
  {include} ( filename -- )
@@ -592,14 +598,6 @@
 
  {cat} ( str1 str2 -- str1str2 )
 
-==={empty} - empty a string===
-
- {empty} ( name -- )
-
-_note: In the next release {empty} will be moved out of the core interpreter and added to extend.mm instead:_
-
-```{empty} ( name -- ) ```& {swap}${!}```
-
 ==={len} - string length===
 
  {len} ( str -- u )
@@ -611,6 +609,13 @@ _note: In the next release {empty} will be moved out of the core interpreter and
 ==={match?} - test for string equality===
 
  {match?} ( str1 str2 -- 0|-1 )
+
+==={replace} - substring replacement===
+
+ {replace} ( str fromStr toStr  -- str' )
+
+ Replaces all occurences of _fromStr_ within _str_ to _toStr_.
+
 
 ==={substr} - extract a substring===
 
@@ -717,6 +722,7 @@ _note: In the next release {empty} will be moved out of the core interpreter and
 ||<b>{2aux>>}</b>||( -- x y ) aux:( x y -- x y )||copy 2 items from auxiliary stack||```{2aux>>} ( -- x y ) aux:( x y -- x y ) ```{2pop}${2dup}${2push}```||
 ||<b>{2drop}</b>||( x y -- )||discard top two stack items||```{2drop} ( x y -- ) ```{drop}${drop}```||
 ||<b>{2dup}</b>||( x y -- x y x y )||duplicate to two stack item||```{2dup} ( x y -- x y x y ) ```{over}${over}```||
+||<b>{empty}</b>||( name -- )||empty a string||```{empty} ( name -- ) ```& {swap}${!}```||
 ||<b>{empty?}</b>||( name -- -1|0)||test if macro is empty||```{empty?} ( name -- -1|0 ) ```[{len} 0& {=}]```||
 ||<b>{exch}</b>||( x name -- y )||exchange the value of a variable with a stack item||```{exch} ( x name -- y ) ```{dup}${@}${-rot}${!}```||
 ||<b>{@++}</b>||( name -- u )||fetch and post-increment a variable||```{@++} ( name -- u ) ```{dup}${@}${swap}${++}```||
