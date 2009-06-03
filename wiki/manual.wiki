@@ -736,9 +736,9 @@
 ||<b>{nip}</b>||discard next of stack||```{nip} ( x y -- y ) ```{swap}${drop}```||
 ||<b>{2pop}</b>||pop 2 items from auxiliary stack||```{2pop} ( -- x y ) aux:( x y -- ) ```{pop}${pop}${swap}```||
 ||<b>{2push}</b>||push 2 items to auxiliary stack||```{2push} ( x y -- ) aux:( -- x y ) ```{swap}${push}${push}```||
-||<b>{rot}</b>|| ||```{rot} ( x y z -- y z x ) ```{push}${swap}${pop}${swap}```||
-||<b>{-rot}</b>|| ||```{-rot} ( x y z -- z x y ) ```{swap}${push}${swap}${pop}```||
-||<b>{tuck}</b>|| ||```{tuck} ( x y -- y x y ) ```{swap}${over}```||
+||<b>{rot}</b>||rotate clockwise the top three stack items||```{rot} ( x y z -- y z x ) ```{push}${swap}${pop}${swap}```||
+||<b>{-rot}</b>||rotate counter-clockwise the top three stack items||```{-rot} ( x y z -- z x y ) ```{swap}${push}${swap}${pop}```||
+||<b>{tuck}</b>||copy the top stack item under the second stack item||```{tuck} ( x y -- y x y ) ```{swap}${over}```||
 
 {{{[}}} ...more to come ... {{{]}}}
 =7 Sample macros=
