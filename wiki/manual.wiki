@@ -715,26 +715,30 @@
 
  Sample extension macros are supplied in the _extend-<version info>.mm_ file.
 
-||<b>macro</b>||<b>stack effect</b>||<b>description</b>||<b>source</b>||
-||<b>{>>aux}</b>||( x -- x ) aux:( -- x )||copy to auxiliary stack||```{>>aux} ( x -- x ) aux:( -- x ) ```{dup}${push}```||
-||<b>{aux>>}</b>||( -- x ) aux:( x -- x )||copy from auxiliary stack||```{aux>>} ( -- x ) aux:( x -- x ) ```{pop}${dup}${push}```||
-||<b>{2>>aux}</b>||( x y -- x y ) aux:( -- x y )||copy 2 items to auxiliary stack||```{2>>aux} ( x y -- x y ) aux:( -- x y ) ```{2dup}${2push}```||
-||<b>{2aux>>}</b>||( -- x y ) aux:( x y -- x y )||copy 2 items from auxiliary stack||```{2aux>>} ( -- x y ) aux:( x y -- x y ) ```{2pop}${2dup}${2push}```||
-||<b>{2drop}</b>||( x y -- )||discard top two stack items||```{2drop} ( x y -- ) ```{drop}${drop}```||
-||<b>{2dup}</b>||( x y -- x y x y )||duplicate to two stack item||```{2dup} ( x y -- x y x y ) ```{over}${over}```||
-||<b>{empty}</b>||( name -- )||empty a string||```{empty} ( name -- ) ```& {swap}${!}```||
-||<b>{empty?}</b>||( name -- -1|0)||test if macro is empty||```{empty?} ( name -- -1|0 ) ```[{len} 0& {=}]```||
-||<b>{exch}</b>||( x name -- y )||exchange the value of a variable with a stack item||```{exch} ( x name -- y ) ```{dup}${@}${-rot}${!}```||
-||<b>{@++}</b>||( name -- u )||fetch and post-increment a variable||```{@++} ( name -- u ) ```{dup}${@}${swap}${++}```||
-||<b>{lift}</b>||( x y -- x x y )||duplicate next of stack||```{lift} ( x y -- x x y ) ```{push}${dup}${pop}```||
-||<b>{max}</b>||( n1 n2 -- n )||maximum||```{max} (n1 n2 -- n ) ```{{{[}}}{2dup} {>} {drop}& {nip}& {ifelse}{{{]}}}```||
-||<b>{min}</b>||( n1 n2 -- n )||minimum||```{min} (n1 n2 -- n ) ```{{{[}}}{2dup} {<} {drop}& {nip}& {ifelse}{{{]}}}```||
-||<b>{nip}</b>||( x y -- y )||discard next of stack||```{nip} ( x y -- y ) ```{swap}${drop}```||
-||<b>{2pop}</b>||( -- x y ) aux:( x y -- )||pop 2 items from auxiliary stack||```{2pop} ( -- x y ) aux:( x y -- ) ```{pop}${pop}${swap}```||
-||<b>{2push}</b>||( x y -- ) aux:( -- x y )||push 2 items to auxiliary stack||```{2push} ( x y -- ) aux:( -- x y ) ```{swap}${push}${push}```||
-||<b>{rot}</b>||( x y z -- y z x )|| ||```{rot} ( x y z -- y z x ) ```{push}${swap}${pop}${swap}```||
-||<b>{-rot}</b>||( x y z -- z x y )|| ||```{-rot} ( x y z -- z x y ) ```{swap}${push}${swap}${pop}```||
-||<b>{tuck}</b>||( x y -- y x y )|| ||```{tuck} ( x y -- y x y ) ```{swap}${over}```||
+||<b>macro</b>||<b>description</b>||<b>source</b>||
+||<b>{>>aux}</b>||copy to auxiliary stack||```{>>aux} ( x -- x ) aux:( -- x ) ```{dup}${push}```||
+||<b>{aux>>}</b>||copy from auxiliary stack||```{aux>>} ( -- x ) aux:( x -- x ) ```{pop}${dup}${push}```||
+||<b>{2>>aux}</b>||copy 2 items to auxiliary stack||```{2>>aux} ( x y -- x y ) aux:( -- x y ) ```{2dup}${2push}```||
+||<b>{2aux>>}</b>||copy 2 items from auxiliary stack||```{2aux>>} ( -- x y ) aux:( x y -- x y ) ```{2pop}${2dup}${2push}```||
+||<b>{2drop}</b>||discard top two stack items||```{2drop} ( x y -- ) ```{drop}${drop}```||
+||<b>{2dup}</b>||duplicate to two stack item||```{2dup} ( x y -- x y x y ) ```{over}${over}```||
+||<b>{bind}</b>||bind the top of stack to a literal definition||```{bind} ( x action -- action' ) ```~&$~& {swap}${cat}${cat}```||
+||<b>{2bind}</b>||bind the top two stack items to a literal definition||```{2bind} ( x y action -- action' ) ```{bind}${bind}```||
+||<b>{3bind}</b>||bind the top three stack items to a literal definition||```{3bind} ( x y z action -- action' ) ```{2bind}${bind}```||
+||<b>{ecat}</b>||concatenate with intervening embedding character||```{ecat} ( s1 s2 -- s1$s2' ) ```{swap}${embed@}${cat}${swap}${cat}```||
+||<b>{empty}</b>||empty a string||```{empty} ( name -- ) ```& {swap}${!}```||
+||<b>{empty?}</b>||test if macro is empty||```{empty?} ( name -- -1|0 ) ```[{len} 0& {=}]```||
+||<b>{exch}</b>||exchange the value of a variable with a stack item||```{exch} ( x name -- y ) ```{dup}${@}${-rot}${!}```||
+||<b>{@++}</b>||fetch and post-increment a variable||```{@++} ( name -- u ) ```{dup}${@}${swap}${++}```||
+||<b>{lift}</b>||duplicate next of stack||```{lift} ( x y -- x x y ) ```{push}${dup}${pop}```||
+||<b>{max}</b>||maximum||```{max} (n1 n2 -- n ) ```{{{[}}}{2dup} {>} {drop}& {nip}& {ifelse}{{{]}}}```||
+||<b>{min}</b>||minimum||```{min} (n1 n2 -- n ) ```{{{[}}}{2dup} {<} {drop}& {nip}& {ifelse}{{{]}}}```||
+||<b>{nip}</b>||discard next of stack||```{nip} ( x y -- y ) ```{swap}${drop}```||
+||<b>{2pop}</b>||pop 2 items from auxiliary stack||```{2pop} ( -- x y ) aux:( x y -- ) ```{pop}${pop}${swap}```||
+||<b>{2push}</b>||push 2 items to auxiliary stack||```{2push} ( x y -- ) aux:( -- x y ) ```{swap}${push}${push}```||
+||<b>{rot}</b>|| ||```{rot} ( x y z -- y z x ) ```{push}${swap}${pop}${swap}```||
+||<b>{-rot}</b>|| ||```{-rot} ( x y z -- z x y ) ```{swap}${push}${swap}${pop}```||
+||<b>{tuck}</b>|| ||```{tuck} ( x y -- y x y ) ```{swap}${over}```||
 
 {{{[}}} ...more to come ... {{{]}}}
 =7 Sample macros=
