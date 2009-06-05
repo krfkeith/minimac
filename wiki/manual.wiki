@@ -713,37 +713,14 @@
 
 =6 Sample Extensions=
 
- Sample extension macros are supplied in the _extend-<version info>.mm_ file.
+ Examples of possible extension macros are supplied in the _extend-<version info>.mm_ file available for download at http://code.google.com/p/minimac/downloads/list
 
-||<b>macro</b>||<b>description</b>||<b>source</b>||
-||<b>{>>aux}</b>||copy to auxiliary stack||```{>>aux} ( x -- x ) aux:( -- x ) ```{dup}${push}```||
-||<b>{aux>>}</b>||copy from auxiliary stack||```{aux>>} ( -- x ) aux:( x -- x ) ```{pop}${dup}${push}```||
-||<b>{2>>aux}</b>||copy 2 items to auxiliary stack||```{2>>aux} ( x y -- x y ) aux:( -- x y ) ```{2dup}${2push}```||
-||<b>{2aux>>}</b>||copy 2 items from auxiliary stack||```{2aux>>} ( -- x y ) aux:( x y -- x y ) ```{2pop}${2dup}${2push}```||
-||<b>{2drop}</b>||discard top two stack items||```{2drop} ( x y -- ) ```{drop}${drop}```||
-||<b>{2dup}</b>||duplicate to two stack item||```{2dup} ( x y -- x y x y ) ```{over}${over}```||
-||<b>{bind}</b>||bind the top of stack to a literal definition||```{bind} ( x action -- action' ) ```~&$~& {swap}${cat}${cat}```||
-||<b>{2bind}</b>||bind the top two stack items to a literal definition||```{2bind} ( x y action -- action' ) ```{bind}${bind}```||
-||<b>{3bind}</b>||bind the top three stack items to a literal definition||```{3bind} ( x y z action -- action' ) ```{2bind}${bind}```||
-||<b>{ecat}</b>||concatenate with intervening embedding character||```{ecat} ( s1 s2 -- s1$s2' ) ```{swap}${embed@}${cat}${swap}${cat}```||
-||<b>{empty}</b>||empty a string||```{empty} ( name -- ) ```& {swap}${!}```||
-||<b>{empty?}</b>||test if macro is empty||```{empty?} ( name -- -1|0 ) ```[{len} 0& {=}]```||
-||<b>{exch}</b>||exchange the value of a variable with a stack item||```{exch} ( x name -- y ) ```{dup}${@}${-rot}${!}```||
-||<b>{@++}</b>||fetch and post-increment a variable||```{@++} ( name -- u ) ```{dup}${@}${swap}${++}```||
-||<b>{lift}</b>||duplicate next of stack||```{lift} ( x y -- x x y ) ```{push}${dup}${pop}```||
-||<b>{max}</b>||maximum||```{max} (n1 n2 -- n ) ```{{{[}}}{2dup} {>} {drop}& {nip}& {ifelse}{{{]}}}```||
-||<b>{min}</b>||minimum||```{min} (n1 n2 -- n ) ```{{{[}}}{2dup} {<} {drop}& {nip}& {ifelse}{{{]}}}```||
-||<b>{nip}</b>||discard next of stack||```{nip} ( x y -- y ) ```{swap}${drop}```||
-||<b>{2pop}</b>||pop 2 items from auxiliary stack||```{2pop} ( -- x y ) aux:( x y -- ) ```{pop}${pop}${swap}```||
-||<b>{2push}</b>||push 2 items to auxiliary stack||```{2push} ( x y -- ) aux:( -- x y ) ```{swap}${push}${push}```||
-||<b>{rot}</b>||rotate clockwise the top three stack items||```{rot} ( x y z -- y z x ) ```{push}${swap}${pop}${swap}```||
-||<b>{-rot}</b>||rotate counter-clockwise the top three stack items||```{-rot} ( x y z -- z x y ) ```{swap}${push}${swap}${pop}```||
-||<b>{tuck}</b>||copy the top stack item under the second stack item||```{tuck} ( x y -- y x y ) ```{swap}${over}```||
-
-{{{[}}} ...more to come ... {{{]}}}
 =7 Sample macros=
 
- see: http://code.google.com/p/minimac/wiki/examples
+ The classic '99 bottles of beer' example is available for download in the file _99bottles.mm at:
+ http://code.google.com/p/minimac/downloads/list
+
+ Examples are also available in the _examples_ wiki page at: http://code.google.com/p/minimac/w/list
 
 =8 Quirks and limitations=
 
