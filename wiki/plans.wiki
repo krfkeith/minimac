@@ -23,4 +23,4 @@
 ||<s>20</s>||<s>change {cat} from ( str1 str2 -- str2str1 ) to ( str1 str2 -- str1str2 )</s>||done|| || ||
 ||<s>21</s>||<s>remove {empty} from the core language, provide as extension instead</s>||done||```{empty} ( name -- ) ```& {swap}${!}```||||
 ||<s>22</s>||<s>append to a diversion</s>||done||{divert+} ( filename -- )||||
-||23||built-in for in-place expansion of top of stack||under consideration||( x -- x' )||||
+||23||built-in for in-place expansion of top of stack||this would be very powerful, currently experimenting, hopefully next release (0.2-alpha)||( x -- ??? x' )||||
