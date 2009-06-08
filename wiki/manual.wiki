@@ -469,7 +469,8 @@
 
  Expand the top of stack.
 
- See also: {?>} - expand to stack
+ See also: 
+ * {?>} - expand to stack
 
 ==={?>} - expand to stack===
 
@@ -480,7 +481,7 @@
  Expands the top of stack, all output intended for stdout is instead collated in a buffer which is then pushed onto the stack.
 
  See also:
-  *{?} - expand
+  * {?} - expand
 
 ==={if} - if conditional===
 
@@ -558,7 +559,7 @@
  Print the top of stack without expansion.
 
  See also:
- *{?} - expand
+ * {?} - expand
 
 ==={divert} - output diversion===
 
@@ -567,8 +568,8 @@
  Temporarily diverts the output stream to a file. Overwrites the file if it already exists.
 
  See also:
- *{divert+} - output diversion append
- *{?>} - expand to stack
+ * {divert+} - output diversion append
+ * {?>} - expand to stack
 
 ==={divert+} - output diversion append===
 
@@ -586,7 +587,7 @@
 
  {undivert} ( -- )
 
- Ceases the most recent output diversion started by {divert}.
+ Ceases the most recent output diversion started by {divert} or {divert+}.
 
 ==={verbatim} - file inclusion (without expansion)===
 
