@@ -470,7 +470,7 @@
  Expand the top of stack.
 
  See also: 
- * {?>} - expand to stack
+  * {?>} - expand to stack
 
 ==={?>} - expand to stack===
 
@@ -559,7 +559,7 @@
  Print the top of stack without expansion.
 
  See also:
- * {?} - expand
+  * {?} - expand
 
 ==={divert} - output diversion===
 
@@ -568,14 +568,17 @@
  Temporarily diverts the output stream to a file. Overwrites the file if it already exists.
 
  See also:
- * {divert+} - output diversion append
- * {?>} - expand to stack
+  * {divert+} - output diversion append
+  * {?>} - expand to stack
 
 ==={divert+} - output diversion append===
 
  {divert+} ( filename -- )
 
  Temporarily diverts the output stream to a file. Appends to the file if it already exists.
+
+ See also:
+  * {divert} - output diversion
 
 ==={include} - file inclusion===
 
