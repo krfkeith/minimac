@@ -476,7 +476,7 @@
 
  {?>} ( action -- ??? output )
 
- Expands the top of stack, all output intended for stdout is instead collated in a buffer which is then pushed onto the stack.
+ Expands the top of stack, all output intended for stdout (or the current diversion) is instead collated in a buffer which is then pushed onto the stack.
 
  See also:
   * {?} - expand
