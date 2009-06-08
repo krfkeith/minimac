@@ -475,7 +475,7 @@
 
 <font color="green">This feature will be available in the next release (0.2.0 Alpha)</font><br/>
 
- {?>} ( action -- ??? <output> )
+ {?>} ( action -- ??? output )
 
  Expands the top of stack, all output intended for stdout is instead collated in a buffer which is then pushed onto the stack.
 
@@ -563,6 +563,10 @@
  {divert} ( filename -- )
 
  Temporarily diverts the output stream to a file. Overwrites the file if it already exists.
+
+ See also:
+  {divert+} - output diversion append
+  {?>} - expand to stack
 
 ==={divert+} - output diversion append===
 
