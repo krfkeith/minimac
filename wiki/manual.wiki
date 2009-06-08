@@ -467,7 +467,19 @@
 
  {?} ( action -- ??? )
 
- Expand the top of stack. 
+ Expand the top of stack.
+
+ See also: {?>} - expand to stack
+
+==={?>} - expand to stack===
+
+<font color="green">This feature will be available in the next release (0.2.0 Alpha)</font><br/>
+
+ {?>} ( action -- ??? <output> )
+
+ Expands the top of stack, all output intended for stdout is instead collated in a buffer which is then pushed onto the stack.
+
+ See also: {?} - expand
 
 ==={if} - if conditional===
 
@@ -543,6 +555,8 @@
  {.} ( str -- )
 
  Print the top of stack without expansion.
+
+ See also: {?} - expand
 
 ==={divert} - output diversion===
 
