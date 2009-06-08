@@ -474,8 +474,6 @@
 
 ==={?>} - expand to stack===
 
-<font color="green">This feature will be available in the next release (0.2.0 Alpha)</font><br/>
-
  {?>} ( action -- ??? output )
 
  Expands the top of stack, all output intended for stdout is instead collated in a buffer which is then pushed onto the stack.
@@ -630,16 +628,15 @@
 
  {lower} ( str -- str' )
 
-==={match?} - test for string equality===
-
- {match?} ( str1 str2 -- 0|-1 )
-
 ==={replace} - substring replacement===
 
  {replace} ( str fromStr toStr  -- str' )
 
  Replaces all occurences of _fromStr_ within _str_ to _toStr_.
 
+==={same?} - test for string equality===
+
+ {same?} ( str1 str2 -- 0|-1 )
 
 ==={substr} - extract a substring===
 
