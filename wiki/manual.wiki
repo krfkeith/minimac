@@ -479,7 +479,8 @@
 
  Expands the top of stack, all output intended for stdout is instead collated in a buffer which is then pushed onto the stack.
 
- See also: {?} - expand
+ See also:
+  *{?} - expand
 
 ==={if} - if conditional===
 
@@ -556,7 +557,8 @@
 
  Print the top of stack without expansion.
 
- See also: {?} - expand
+ See also:
+ *{?} - expand
 
 ==={divert} - output diversion===
 
@@ -565,8 +567,8 @@
  Temporarily diverts the output stream to a file. Overwrites the file if it already exists.
 
  See also:
-  {divert+} - output diversion append
-  {?>} - expand to stack
+ *{divert+} - output diversion append
+ *{?>} - expand to stack
 
 ==={divert+} - output diversion append===
 
