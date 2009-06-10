@@ -44,7 +44,7 @@
  Minimac consists of a single OS-independent Ansi C source file, the naming convention is <i>mm-<version info>.c</i>
  To compile minimac refer to your C compiler instructions, a typical compile on a Unix based sytem would look something like this:
 <tt>
- cc -Wall -o mm mm-0.1.2-alpha.c
+ cc -Wall -o mm mm-0.2.2-alpha.c
 </tt>
 
  The minimac executable is named 'mm'. Minimac reads from standard input and writes the processed text to standard output, error messages are written to standard error.
