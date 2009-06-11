@@ -480,7 +480,7 @@
 
  Example: 
 <tt><b>
- ```enquote ( s -- "s" )```~"${?}$"~& {?>}```<br/>
+ ```enquote ( s -- "s" ) ```~"${?}$"~& {?>}```<br/>
  =><br/>
  <br/>
  ~hello there~& enquote {.s}<br/>
