@@ -478,6 +478,19 @@
 
  Expands the top of stack, all output intended for stdout (or the current diversion) is instead collated in a buffer which is then pushed onto the stack.
 
+ Example: 
+<tt><b>
+ ```enquote ( s -- "s" )```~"${?}$"~& {?>}```<br/>
+ =><br/>
+ <br/>
+ ~hello there~& enquote {.s}<br/>
+ =><br/>
+ =>-------<br/>
+ =>Items on the stack (1):<br/>
+ `=>stack[0] => ["hello there"]`<br/>
+ =>-------<br/>
+</b></tt>
+
  See also:
   * {?} - expand
 
