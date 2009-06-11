@@ -105,8 +105,8 @@
  {.m}<br/>
  =>-------`<br/>
  =>Macros (2):<br/>
- =>`d[1] => name[2nd] value[another macro]`<br/>
  =>`d[0] => name[1st] value[my first macro]`<br/>
+ =>`d[1] => name[2nd] value[another macro]`<br/>
  =>-------<br/>
 </b></tt>
 
