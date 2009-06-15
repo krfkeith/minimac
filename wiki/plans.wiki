@@ -14,7 +14,7 @@
 ||11||discontinue using brackets as special chars||under consideration|| || ||
 ||<s>12</s>||<s>case statement</s>||done||{case}|| ||
 ||<s>13</s>||<s>change {.s} {.a} {.m} so they output to stderr</s>||done|| || ||
-||14||'slurping' a file into a variable||under consideration|| || ||
+||<s>14</s>||<s>'slurping' a file into a variable</s>||cancelled||superceded by #23|| ||
 ||<s>15</s>||<s>deprecate the {execute} built-in</s>||done|| || ||
 ||16||built-in which determines if a macro name is defined||under consideration||{defined?} ( name -- -1|0 )|| ||
 ||17||Short definitions on the shell command line||under consideration|| ||SteveB||
@@ -23,4 +23,4 @@
 ||<s>20</s>||<s>change {cat} from ( str1 str2 -- str2str1 ) to ( str1 str2 -- str1str2 )</s>||done|| || ||
 ||<s>21</s>||<s>remove {empty} from the core language, provide as extension instead</s>||done||```{empty} ( name -- ) ```& {swap}${!}```||||
 ||<s>22</s>||<s>append to a diversion</s>||done||{divert+} ( filename -- )||||
-||23||built-in for in-place expansion of top of stack||this would be very powerful, currently experimenting, hopefully next release (0.2-alpha)||( x -- ??? x' )||||
+||<s>23</s>||<s>built-in for in-place expansion of top of stack</s>||done||( x -- ??? x' )||||
