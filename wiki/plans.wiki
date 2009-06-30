@@ -25,3 +25,4 @@
 ||<s>22</s>||<s>append to a diversion</s>||done||{divert+} ( filename -- )||||
 ||<s>23</s>||<s>built-in for in-place expansion of top of stack</s>||done||{?>} ( x -- ??? x' )||||
 ||24||Have {remove} handle non-existent files silently rather than return an error||next release||||||
+||25||built-in that undefines a user macro||next release||{undefine} ( name -- )||||
