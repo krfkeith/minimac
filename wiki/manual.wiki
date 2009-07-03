@@ -739,6 +739,10 @@
 
  {shell} ( str -- return-code )
 
+==={undefine} - remove a user-defined macro from the dictionary===
+
+ {undefine} ( macroname -- )
+
 ==={version} - version string===
 
  {version} ( -- str )
