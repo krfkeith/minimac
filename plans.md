@@ -1,0 +1,27 @@
+|#|<b>enhancement</b>|<b>status</b>|<b>notes</b>|<b>suggested by</b>|
+|:|:-----------------|:------------|:-----------|:------------------|
+|<s>1</s>|<s>output diversions</s>|done         |{divert} {undivert}|                   |
+|<s>2</s>|<s>single-line comments</s>|done         |{#}         |                   |
+|3|multi-line comments|under consideration|            |                   |
+|<s>4</s>|<s>user-configurable special characters</s>|done         |            |                   |
+|<s>5</s>|<s>non-expanding version of {include}</s>|done         |{verbatim}  |                   |
+|<s>6</s>|<s>shell commands</s>|done         |{shell}     |                   |
+|<s>7</s>|<s>character translation built-in</s>|done         |{tr}        |                   |
+|8|date & time handling|under consideration|            |                   |
+|9|random number generation|under consideration|            |                   |
+|10|debugging & diagnostic tools|planned      |            |                   |
+|11|discontinue using brackets as special chars|under consideration|            |                   |
+|<s>12</s>|<s>case statement</s>|done         |{case}      |                   |
+|<s>13</s>|<s>change {.s} {.a} {.m} so they output to stderr</s>|done         |            |                   |
+|<s>14</s>|<s>'slurping' a file into a variable</s>|cancelled    |superceded by #23|                   |
+|<s>15</s>|<s>deprecate the {execute} built-in</s>|done         |            |                   |
+|16|built-in which determines if a macro name is defined|under consideration|{defined?} ( name -- -1|0 )|                   |
+|17|Short definitions on the shell command line|under consideration|            |SteveB             |
+|<s>18</s>|<s>Builtin function that looks up an environment variable</s>|done         |{env} ( name -- value )|SteveB             |
+|19|environmental variable for directories to be searched for {include} and {verbatim}|planned      |MINIMAC\_PATH|SteveB             |
+|<s>20</s>|<s>change {cat} from ( str1 str2 -- str2str1 ) to ( str1 str2 -- str1str2 )</s>|done         |            |                   |
+|<s>21</s>|<s>remove {empty} from the core language, provide as extension instead</s>|done         |`````{empty} ( name -- ) `````& {swap}${!}`````|                   |
+|<s>22</s>|<s>append to a diversion</s>|done         |{divert+} ( filename -- )|                   |
+|<s>23</s>|<s>built-in for in-place expansion of top of stack</s>|done         |{?>} ( x -- ??? x' )|                   |
+|<s>24<table><thead><th><s>Have {remove} handle non-existent files silently rather than return an error</s></th><th>next release </th><th>            </th><th>                   </th></thead><tbody>
+<tr><td><s>25</s></td><td><s>built-in that undefines a user macro</s></td><td>done         </td><td>{undefine} ( name -- )</td><td>                   </td></tr>
